@@ -1,0 +1,467 @@
+/* Estilos propios del demo.
+   Los colores, la tipografía y los espaciados salen de los tokens que define
+   ../../css/styles.css, así que el demo cambia de tema junto con el sitio. */
+
+.demo-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+/* ---------------------------------------------------------------- cabecera */
+
+.demo-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-3) max(16px, calc((100% - var(--max-width)) / 2));
+  background: var(--color-glass);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(14px);
+}
+
+.demo-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 40px;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.demo-volver:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-primary-light);
+}
+
+/* ------------------------------------------------------------------ portada */
+
+.demo-main {
+  flex: 1;
+  width: min(100% - 32px, var(--max-width));
+  margin: 0 auto;
+  padding: var(--space-12) 0 var(--space-16);
+}
+
+.demo-intro {
+  max-width: 70ch;
+  margin-bottom: var(--space-12);
+}
+
+.demo-intro h1 {
+  font-size: clamp(1.8rem, 4.5vw, 2.7rem);
+  margin-bottom: var(--space-5);
+}
+
+.demo-intro p {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.demo-intro code {
+  padding: 0.1em 0.4em;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  font-family: var(--font-heading);
+  font-size: 0.88em;
+}
+
+.demo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.demo-meta strong {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  margin-right: 0.35em;
+}
+
+/* ------------------------------------------------------------------- grilla */
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: var(--space-8);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.demo-aside {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.panel {
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.panel h2 {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-2);
+}
+
+.panel-nota {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------------------ esquema */
+
+.tabla-esquema {
+  margin-bottom: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.tabla-esquema:last-child {
+  margin-bottom: 0;
+}
+
+.tabla-esquema__nombre {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-surface-hover);
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-heading);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.tabla-esquema__nombre span {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.tabla-esquema ul {
+  margin: 0;
+  padding: var(--space-2);
+  list-style: none;
+  display: grid;
+  gap: 2px;
+}
+
+.col-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 5px var(--space-2);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 0.79rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.col-btn:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-primary-light);
+}
+
+.col-btn .tipo {
+  margin-left: auto;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.03em;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.pill-pk {
+  background: var(--color-primary);
+  color: var(--color-button-text);
+}
+
+.pill-fk {
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+}
+
+/* ----------------------------------------------------------------- ejemplos */
+
+.ejemplos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 4px;
+  counter-reset: ejemplo;
+}
+
+.ejemplo-btn {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  counter-increment: ejemplo;
+}
+
+.ejemplo-btn::before {
+  content: counter(ejemplo);
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  padding-top: 2px;
+}
+
+.ejemplo-btn:hover,
+.ejemplo-btn.is-active {
+  border-color: var(--color-border);
+  background: var(--color-surface-hover);
+}
+
+.ejemplo-btn strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ejemplo-btn span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.76rem;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+}
+
+/* ------------------------------------------------------------------- editor */
+
+.demo-editor {
+  display: grid;
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+.editor-box {
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.editor-label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.editor {
+  width: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  resize: vertical;
+  tab-size: 2;
+}
+
+.editor:focus {
+  border-color: var(--color-primary);
+}
+
+.editor-ayuda {
+  margin: var(--space-3) 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.editor-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+/* ---------------------------------------------------------------- resultado */
+
+.resultado {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.resultado-cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface-hover);
+}
+
+.resultado-cabecera h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.resultado-estado {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+}
+
+.resultado-cuerpo {
+  overflow-x: auto;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.tabla-resultado {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.tabla-resultado th,
+.tabla-resultado td {
+  padding: var(--space-2) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.tabla-resultado th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--color-surface-hover);
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+}
+
+.tabla-resultado tbody tr:hover {
+  background: var(--color-surface-hover);
+}
+
+.tabla-resultado td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-heading);
+}
+
+.nulo {
+  padding: 0 5px;
+  border-radius: 3px;
+  background: var(--color-surface-hover);
+  border: 1px dashed var(--color-border);
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+
+.mensaje {
+  padding: var(--space-6) var(--space-5);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.mensaje-error {
+  color: var(--color-danger);
+  font-weight: 600;
+}
+
+.mensaje-error code {
+  display: block;
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 400;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.mensaje-error .marca {
+  color: var(--color-danger);
+  font-weight: 800;
+}
+
+/* --------------------------------------------------------------------- pie */
+
+.demo-footer {
+  padding: var(--space-6) max(16px, calc((100% - var(--max-width)) / 2));
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.demo-footer p {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .editor-acciones .button {
+    width: 100%;
+  }
+}

@@ -62,6 +62,35 @@ Abrir http://localhost:8000. Conviene usar un servidor en lugar de abrir el
 archivo directamente: con `file://` no funcionan correctamente las rutas ni el
 iframe del mapa.
 
+## Demo del proyecto académico
+
+En `proyectos/academico/` hay un demo interactivo: un motor SQL escrito en
+JavaScript vanilla que resuelve consultas contra un modelo relacional de
+biblioteca (autores, libros, socios y préstamos), enteramente en el navegador.
+
+Soporta `SELECT`, `JOIN`, `LEFT JOIN`, `WHERE`, `GROUP BY`, `HAVING`,
+`ORDER BY`, `LIMIT`, `DISTINCT` y los agregados `COUNT`, `SUM`, `AVG`, `MIN` y
+`MAX`, con la lógica de tres valores de SQL para los `NULL`.
+
+```
+proyectos/academico/
+├── index.html   interfaz
+├── demo.css     estilos propios (los colores salen de los tokens del sitio)
+├── data.js      esquema, datos y consultas de ejemplo
+├── sql.js       motor: tokenizador, parser y evaluador
+├── app.js       interfaz: esquema, ejemplos y tabla de resultados
+└── tests.js     40 pruebas del motor
+```
+
+Para correr las pruebas hace falta Node:
+
+```bash
+cd proyectos/academico && node tests.js
+```
+
+Para adaptar el demo a otro conjunto de datos alcanza con reemplazar `data.js`:
+ni el motor ni la interfaz tienen el esquema escrito, lo leen de ahí.
+
 ## Formulario de contacto
 
 Por defecto el formulario **no envía nada a un servidor**: abre el cliente de
@@ -113,7 +142,8 @@ La URL queda en `https://veronica-marisa-soria1.github.io/WebMorph.dev/`.
 - [ ] Publicar en GitHub Pages
 - [ ] Conectar el formulario a un endpoint real (`CONTACT_ENDPOINT`)
 - [ ] Activar la analítica de GoatCounter (snippet comentado en `index.html`)
-- [ ] Reemplazar los "Demo pendiente" / "Código pendiente" de los proyectos por links reales
+- [ ] Reemplazar los "Demo pendiente" / "Código pendiente" de MH Gestión y ChacoAgro IA por links reales
+- [ ] Adaptar el esquema y los datos del demo académico a los del trabajo real de la Tecnicatura
 - [ ] Agregar `assets/cv.pdf` y enlazarlo desde el botón "Solicitar CV"
 - [ ] Actualizar `<lastmod>` en `sitemap.xml` tras cada cambio importante
 

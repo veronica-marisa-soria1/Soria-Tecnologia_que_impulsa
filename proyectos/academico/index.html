@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo interactivo: consultá una base de datos de biblioteca con SQL real, ejecutado en el navegador. Proyecto académico de Verónica — Web Morph.">
+  <title>Consultas SQL sobre una biblioteca | Web Morph</title>
+
+  <link rel="canonical" href="https://veronica-marisa-soria1.github.io/WebMorph.dev/proyectos/academico/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Web Morph">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:url" content="https://veronica-marisa-soria1.github.io/WebMorph.dev/proyectos/academico/">
+  <meta property="og:title" content="Consultas SQL sobre una biblioteca | Web Morph">
+  <meta property="og:description" content="Demo interactivo: escribí SQL y ejecutalo contra un modelo de datos relacional, sin servidor.">
+  <meta property="og:image" content="https://veronica-marisa-soria1.github.io/WebMorph.dev/assets/img/og-preview.jpg">
+
+  <link rel="icon" href="../../assets/img/web-morph-logo.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png" sizes="180x180">
+
+  <meta name="theme-color" content="#0B1018" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F4F7FF" media="(prefers-color-scheme: light)">
+
+  <!-- Mismo criterio que el sitio principal: aplicar el tema antes del primer
+       pintado. La clave de localStorage es compartida, así que quien eligió un
+       tema en el portafolio lo encuentra igual acá. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      try {
+        var saved = localStorage.getItem("wm-theme");
+        var light = window.matchMedia("(prefers-color-scheme: light)").matches;
+        root.setAttribute("data-theme", saved || (light ? "light" : "dark"));
+      } catch (e) {
+        root.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&display=swap">
+
+  <!-- Hoja del sitio: aporta los tokens de color, el reset y los botones -->
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="demo.css">
+
+  <script src="data.js" defer></script>
+  <script src="sql.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="demo-body">
+  <a class="skip-link" href="#consulta">Saltar al editor de consultas</a>
+
+  <header class="demo-header">
+    <a class="demo-volver" href="../../index.html#proyectos">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Volver a Web Morph
+    </a>
+
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema">
+      <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+      </svg>
+      <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </header>
+
+  <main class="demo-main">
+    <div class="demo-intro">
+      <p class="eyebrow">Proyecto académico</p>
+      <h1>Consultas SQL sobre una biblioteca</h1>
+      <p>
+        Escribí una consulta y ejecutala. El SQL se analiza y se resuelve
+        enteramente en tu navegador: no hay servidor ni base de datos detrás, y
+        tampoco librerías externas. El motor está escrito en JavaScript para este
+        demo y vive en <code>sql.js</code>.
+      </p>
+      <p class="demo-meta">
+        <span><strong>4</strong> tablas</span>
+        <span><strong id="stat-filas">0</strong> filas</span>
+        <span><strong>0</strong> dependencias</span>
+      </p>
+    </div>
+
+    <div class="demo-grid">
+      <aside class="demo-aside">
+        <section class="panel" aria-labelledby="esquema-title">
+          <h2 id="esquema-title">Esquema</h2>
+          <p class="panel-nota">
+            Tocá una columna para insertarla en el editor. <span class="pill pill-pk">PK</span>
+            es clave primaria y <span class="pill pill-fk">FK</span> clave foránea.
+          </p>
+          <div id="esquema"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="ejemplos-title">
+          <h2 id="ejemplos-title">Ejemplos</h2>
+          <p class="panel-nota">De lo más simple a lo más completo.</p>
+          <ol class="ejemplos" id="ejemplos"></ol>
+        </section>
+      </aside>
+
+      <section class="demo-editor" aria-labelledby="consulta-title">
+        <h2 id="consulta-title" class="sr-only">Editor de consultas</h2>
+
+        <div class="editor-box">
+          <label class="editor-label" for="consulta">Consulta SQL</label>
+          <textarea id="consulta" class="editor" spellcheck="false" rows="8"
+            aria-describedby="editor-ayuda"></textarea>
+          <p id="editor-ayuda" class="editor-ayuda">
+            Ctrl + Enter para ejecutar. Soporta SELECT, JOIN, LEFT JOIN, WHERE,
+            GROUP BY, HAVING, ORDER BY, LIMIT, DISTINCT y los agregados COUNT,
+            SUM, AVG, MIN y MAX.
+          </p>
+          <div class="editor-acciones">
+            <button class="button button-primary" id="ejecutar" type="button">Ejecutar</button>
+            <button class="button button-secondary" id="limpiar" type="button">Limpiar</button>
+          </div>
+        </div>
+
+        <div class="resultado">
+          <div class="resultado-cabecera">
+            <h3>Resultado</h3>
+            <p class="resultado-estado" id="estado" role="status"></p>
+          </div>
+          <div id="salida" class="resultado-cuerpo"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="demo-footer">
+    <p>
+      Demo del proyecto académico &middot;
+      <a href="../../index.html">Web Morph</a> &middot; Verónica, Quitilipi, Chaco
+    </p>
+  </footer>
+</body>
+</html>
