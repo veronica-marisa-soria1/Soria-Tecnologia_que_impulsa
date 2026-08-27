@@ -144,7 +144,9 @@ La URL queda en `https://veronica-marisa-soria1.github.io/WebMorph.dev/`.
 - [ ] Activar la analítica de GoatCounter (snippet comentado en `index.html`)
 - [ ] Reemplazar los "Demo pendiente" / "Código pendiente" de MH Gestión y ChacoAgro IA por links reales
 - [ ] Adaptar el esquema y los datos del demo académico a los del trabajo real de la Tecnicatura
-- [ ] Agregar `assets/cv.pdf` y enlazarlo desde el botón "Solicitar CV"
+- [ ] Decidir qué datos personales del CV se publican: `assets/cv.pdf` incluye teléfono, fecha de nacimiento y estado civil
+- [ ] Corregir en el CV el año mal escrito: "AWS | Abr 2026 – May 20265"
+- [ ] Alinear las certificaciones y el stack de la portada con los que figuran en el CV
 - [ ] Actualizar `<lastmod>` en `sitemap.xml` tras cada cambio importante
 
 ## Desarrollado por
