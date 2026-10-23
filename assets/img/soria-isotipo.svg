@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Isotipo de Soria</title><desc id="desc">Símbolo Soria para redes sociales y favicon.</desc>
+  <defs><linearGradient id="brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16C8E8"/><stop offset=".54" stop-color="#407BF3"/><stop offset="1" stop-color="#7257E9"/></linearGradient><linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#66E8FF"/><stop offset="1" stop-color="#C0B7FF"/></linearGradient></defs>
+  <rect x="28" y="28" width="456" height="456" rx="128" fill="url(#brand)"/>
+  <path d="M348 153c-45-40-115-51-170-26-47 22-65 69-45 106 13 24 37 39 77 52l78 27c28 10 40 27 33 48-9 29-45 42-78 37-35-5-62-22-82-46" fill="none" stroke="#FFF" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m333 143 48 10-15 46" fill="none" stroke="url(#accent)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="127" cy="128" r="13" fill="#FFF" opacity=".8"/>
+</svg>

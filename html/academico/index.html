@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPGS N°12 "Juan Domingo Perón"</title>
+    <link rel="stylesheet" href="styles.css?v=maps-20261023">
+</head>
+<body>
+<div class="pantalla activa" id="inicio">
+    <header class="inicio-cabecera">
+        <a class="marca-institucional" href="#inicio" onclick="abrir('inicio'); return false;" aria-label="Inicio - E.P.G.S. N°12">
+            <img src="logos%20.png" alt="E.P.G.S. N°12 Juan Domingo Perón y Nivel Superior">
+        </a>
+        <button class="boton-institucion" id="botonInstitucion" type="button" onclick="alternarMenu()" aria-label="Abrir menú Institución" aria-controls="menuMovil" aria-expanded="false">
+            Institución <span aria-hidden="true">☰</span>
+        </button>
+        <nav class="menu-institucion" id="menuMovil" aria-label="Menú Institución" aria-hidden="true">
+            <button class="cerrar-menu" type="button" onclick="alternarMenu()" aria-label="Cerrar menú">×</button>
+            <p class="menu-titulo">Nosotros</p>
+            <a href="#" onclick="abrirSeccionMenu('historia'); return false;">Historia</a>
+            <a href="#" onclick="abrirSeccionMenu('contacto'); return false;">Contacto</a>
+            <a href="#" onclick="abrirSeccionMenu('galeria'); return false;">Galería</a>
+            <a href="noticias.html">Noticias</a>
+        </nav>
+        <button class="menu-cortina" id="menuCortina" type="button" onclick="alternarMenu()" aria-label="Cerrar menú"></button>
+    </header>
+    <div class="franja-institucional" aria-hidden="true"></div>
+    <main>
+        <section class="portada-colegio" aria-labelledby="titulo-portada">
+            <div class="portada-carrusel" aria-hidden="true">
+                <div class="portada-imagen portada-imagen-uno"></div>
+                <div class="portada-imagen portada-imagen-dos"></div>
+                <div class="portada-imagen portada-imagen-tres"></div>
+            </div>
+            <div class="portada-contenido">
+                <p class="portada-ubicacion">Chaco, Argentina <span>·</span> Resistencia y Quitilipi</p>
+                <h1 id="titulo-portada">E.P.G.S. N.º 12<br><span>“Juan Domingo Perón”</span></h1>
+                <p class="portada-bajada">Una institución, dos formas de formarte.<br>Elegí por dónde empezar.</p>
+            </div>
+            <div class="portada-pie"><span>Educación pública · Formación para el futuro</span></div>
+        </section>
+        <section class="propuestas-inicio" id="propuestas" aria-label="Propuestas educativas">
+            <article class="propuesta-card superior-card">
+                <div class="propuesta-sello sello-superior" aria-hidden="true">NS</div>
+                <div class="propuesta-texto">
+                    <p class="propuesta-etiqueta">Nivel Superior</p>
+                    <h2>Una carrera para crecer</h2>
+                    <p>Tecnicaturas superiores con título oficial y formación profesional.</p>
+                    <button type="button" onclick="abrir('carreras')">Ver carreras</button>
+                </div>
+            </article>
+            <article class="propuesta-card cursos-card">
+                <div class="propuesta-sello sello-cursos" aria-hidden="true">+</div>
+                <div class="propuesta-texto">
+                    <p class="propuesta-etiqueta">Cursos</p>
+                    <h2>Aprendé algo nuevo</h2>
+                    <p>Formación práctica para sumar herramientas y abrir nuevas oportunidades.</p>
+                    <a class="propuesta-accion" href="inscripciones.html">Consultar propuestas</a>
+                </div>
+            </article>
+        </section>
+        <section class="mapas-sedes" id="mapas-sedes" aria-labelledby="mapas-titulo">
+            <div class="mapas-intro">
+                <p class="propuesta-etiqueta">Encontranos</p>
+                <h2 id="mapas-titulo">Dos sedes, una comunidad</h2>
+                <p>Consultá cómo llegar a nuestras sedes en Resistencia y Quitilipi.</p>
+            </div>
+            <div class="mapas-grid">
+                <article class="sede-mapa">
+                    <div class="sede-info">
+                        <p class="sede-tipo">SEDE CENTRAL</p>
+                        <h3>Resistencia</h3>
+                        <p>Mitre 490<br>Resistencia, Chaco</p>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Mitre%20490%2C%20Resistencia%2C%20Chaco%2C%20Argentina" target="_blank" rel="noopener noreferrer">Abrir en Google Maps <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <iframe title="Mapa de la sede central en Mitre 490, Resistencia" src="https://www.openstreetmap.org/export/embed.html?bbox=-58.9907%2C-27.4506%2C-58.9757%2C-27.4427&amp;layer=mapnik&amp;marker=-27.4466693%2C-58.9831722" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </article>
+                <article class="sede-mapa">
+                    <div class="sede-info">
+                        <p class="sede-tipo">SEDE ANEXO</p>
+                        <h3>Quitilipi</h3>
+                        <p>Córdoba 83, entre San Martín y Rivadavia<br>Quitilipi, Chaco</p>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=C%C3%B3rdoba%2083%2C%20Quitilipi%2C%20Chaco%2C%20Argentina" target="_blank" rel="noopener noreferrer">Abrir en Google Maps <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <iframe title="Mapa de la sede anexo en Córdoba 83, Quitilipi" src="https://www.openstreetmap.org/export/embed.html?bbox=-60.2248%2C-26.8791%2C-60.2103%2C-26.8712&amp;layer=mapnik&amp;marker=-26.87514%2C-60.2175653" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </article>
+            </div>
+        </section>
+    </main>
+</div>
+<div class="pantalla" id="historia">
+    <header class="cabecera">
+        <div class="logo-texto">
+            <div class="logo">
+                <div class="bloque"><div class="simbolo libro"></div></div>
+                <div class="bloque"><div class="simbolo manos"></div></div>
+                <div class="bloque"><div class="simbolo nodos"></div></div>
+            </div>
+            <div class="nombre-escuela">EPGS N°12</div>
+        </div>
+        <div class="menu-hamburguesa" onclick="alternarMenu()">☰</div>
+    </header>
+    <div class="contenido-interno">
+        <div class="volver" onclick="abrir('inicio')">← Volver a la pantalla principal</div>
+        <p class="continuara">CONTINUARA......</p>
+    </div>
+</div>
+
+<div class="pantalla" id="gestion">
+    <header class="cabecera">
+        <div class="logo-texto">
+            <div class="logo">
+                <div class="bloque"><div class="simbolo libro"></div></div>
+                <div class="bloque"><div class="simbolo manos"></div></div>
+                <div class="bloque"><div class="simbolo nodos"></div></div>
+            </div>
+            <div class="nombre-escuela">EPGS N°12</div>
+        </div>
+        <div class="menu-hamburguesa" onclick="alternarMenu()">☰</div>
+    </header>
+    <div class="contenido-interno">
+        <div class="volver" onclick="abrir('inicio')">← Volver a la pantalla principal</div>
+        <h2>Gestión Social y Carácter Institucional</h2>
+        <p>Se trata de una institución educativa de carácter <strong>oficial, público y totalmente gratuito</strong>. Depende orgánica y funcionalmente del Estado Provincial, pero cuenta con un modelo de gestión especial que incorpora la participación activa de la comunidad.</p>
+
+        <div class="recuadro">
+            <h3>¿Cómo funciona su gestión?</h3>
+            <p>A diferencia de instituciones tradicionales, aquí las decisiones importantes se toman escuchando y considerando la opinión de organizaciones sociales, vecinos, referentes locales, estudiantes y docentes. Esto permite adaptar la propuesta educativa a las necesidades reales de la gente y del territorio donde está inserta la escuela.</p>
+        </div>
+
+        <h3>Validez y reconocimiento</h3>
+        <p>Todos los planes de estudio, certificaciones y títulos que se otorgan tienen <strong>validez oficial y nacional</strong>, respaldados por el Ministerio de Educación de la Provincia del Chaco y reconocidos ante el Ministerio de Educación de la Nación, lo que garantiza que los estudios realizados aquí tengan validez en todo el país.</p>
+
+        <h3>Principios que rigen su funcionamiento</h3>
+        <ul>
+            <li>Acceso igualitario a la educación, sin distinción de condición social, edad o procedencia.</li>
+            <li>Transparencia en el manejo de los recursos y en la información institucional.</li>
+            <li>Vínculo permanente con el entorno y las problemáticas locales.</li>
+            <li>Respeto a la diversidad cultural y a las identidades de la región.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="pantalla" id="objetivos">
+    <header class="cabecera">
+        <div class="logo-texto">
+            <div class="logo">
+                <div class="bloque"><div class="simbolo libro"></div></div>
+                <div class="bloque"><div class="simbolo manos"></div></div>
+                <div class="bloque"><div class="simbolo nodos"></div></div>
+            </div>
+            <div class="nombre-escuela">EPGS N°12</div>
+        </div>
+        <div class="menu-hamburguesa" onclick="alternarMenu()">☰</div>
+    </header>
+    <div class="contenido-interno">
+        <div class="volver" onclick="abrir('inicio')">← Volver a la pantalla principal</div>
+        <h2>Misión, Visión y Objetivos Institucionales</h2>
+
+        <h3>Misión</h3>
+        <p>Brindar formación profesional y superior de nivel superior pública y gratuita, con excelencia académica, formando personas integrales comprometidas con el desarrollo local y la justicia social, integrando saberes comprometidos con el desarrollo sostenible y el bienestar de la comunidad, promoviendo el crecimiento personal y su desarrollo integral.</p>
+
+        <h3>Visión</h3>
+        <p>Ser reconocida como una institución educativa referente en la región, destacándose por la calidad de sus enseñanzas, su compromiso social y por el impacto positivo que genera con la comunidad y en la provincia chaqueña.</p>
+
+        <h3>Valores Institucionales</h3>
+        <ul>
+            <li><strong>Igualdad y Equidad:</strong> Brindar las mismas oportunidades de acceso y permanencia en los estudios, atendiendo a las particularidades de cada persona.</li>
+            <li><strong>Compromiso Social:</strong> Estar atentos a las necesidades de la comunidad y trabajar para dar respuestas a sus inquietudes y problemáticas.</li>
+            <li><strong>Responsabilidad y Ética:</strong> Cumplir con los deberes educativos, administrativos y sociales con seriedad y rectitud.</li>
+            <li><strong>Respeto:</strong> Reconocer y valorar la diversidad de ideas, culturas y formas de ser de cada integrante de la comunidad educativa.</li>
+            <li><strong>Solidaridad:</strong> Trabajar colaborativamente y apoyarse mutuamente para alcanzar metas comunes.</li>
+        </ul>
+
+        <h3>Objetivos Generales</h3>
+        <ul>
+            <li>Ampliar las posibilidades de acceso y permanencia en la formación técnica y superior.</li>
+            <li>Formar profesionales competentes para el desarrollo de la actividad productiva y comunitaria.</li>
+            <li>Promover la actualización y perfeccionamiento permanente de los conocimientos.</li>
+            <li>Fortalecer los lazos entre la escuela y el entorno social y productivo.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="pantalla" id="alumno">
+    <header class="cabecera">
+        <div class="logo-texto">
+            <div class="logo">
+                <div class="bloque"><div class="simbolo libro"></div></div>
+                <div class="bloque"><div class="simbolo manos"></div></div>
+                <div class="bloque"><div class="simbolo nodos"></div></div>
+            </div>
+            <div class="nombre-escuela">EPGS N°12</div>
+        </div>
+        <div class="menu-hamburguesa" onclick="alternarMenu()">☰</div>
+    </header>
+    <div class="contenido-interno">
+        <div class="volver" onclick="abrir('inicio')">← Volver a la pantalla principal</div>
+        <h2>Perfil de los Estudiantes</h2>
+        <p>La propuesta educativa está pensada y dirigida principalmente a jóvenes y personas adultas que tienen el deseo de continuar, completar o ampliar sus estudios, o bien capacitarse para mejorar sus condiciones laborales.</p>
+
+        <div class="recuadro">
+            <h3>¿A quiénes está dirigida?</h3>
+            <ul>
+                <li>Jóvenes que han finalizado sus estudios secundarios y desean iniciar una carrera de nivel superior o técnica.</li>
+                <li>Personas adultas que por distintas razones no pudieron continuar estudiando en su momento y deciden retomar hoy su formación académica.</li>
+                <li>Trabajadores y trabajadoras que buscan especializarse, adquirir nuevas herramientas o reorientar su trayectoria laboral.</li>
+                <li>Personas que quieren adquirir conocimientos útiles para su desarrollo personal y su participación en la comunidad.</li>
+            </ul>
+        </div>
+
+        <h3>Modalidades adaptadas</h3>
+        <p>Se tienen en cuenta las distintas realidades de quienes estudian, por lo que se ofrecen propuestas que combinan clases presenciales, materiales de estudio accesibles, y tiempos flexibles cuando es posible, pensando especialmente en quienes tienen responsabilidades laborales o familiares.</p>
+
+        <h3>Formación integral</h3>
+        <p>Además de los conocimientos propios de cada carrera, se busca que los estudiantes desarrollen capacidad de razonamiento, trabajo en equipo, responsabilidad, y valores que los acompañen tanto en su vida profesional como cotidiana.</p>
+    </div>
+</div>
+
+<div class="pantalla" id="docente">
+    <header class="cabecera">
+        <div class="logo-texto">
+            <div class="logo">
+                <div class="bloque"><div class="simbolo libro"></div></div>
+                <div class="bloque"><div class="simbolo manos"></div></div>
+                <div class="bloque"><div class="simbolo nodos"></div></div>
+            </div>
+            <div class="nombre-escuela">EPGS N°12</div>
+        </div>
+        <div class="menu-hamburguesa" onclick="alternarMenu()">☰</div>
+    </header>
+    <div class="contenido-interno">
+        <div class="volver" onclick="abrir('inicio')">← Volver a la pantalla principal</div>
+        <h2>El Trabajo Docente en la Institución</h2>
+        <p>El equipo docente está conformado por profesionales y especialistas que cuentan con la formación adecuada y, fundamentalmente, con una gran vocación y compromiso con la educación pública y popular.</p>
+
+        <h3>Características de la labor educativa</h3>
+        <ul>
+            <li>Se prioriza el acompañamiento personalizado, atendiendo las dudas y dificultades de cada estudiante.</li>
+            <li>Se combinan conocimientos teóricos con ejemplos y aplicaciones prácticas ligadas a la realidad.</li>
+            <li>Se trabaja con un trato cercano, respetuoso y paciente, entendiendo las distintas realidades de los alumnos.</li>
+            <li>Se promueve la participación activa en clase y el intercambio de experiencias.</li>
+        </ul>
+
+        <div class="recuadro">
+            <h3>Capacitación y actualización</h3>
+            <p>Los docentes participan constantemente de instancias de formación y actualización, tanto en los contenidos de su materia como en estrategias de enseñanza, para ofrecer siempre una educación acorde a los tiempos actuales y a las necesidades de los estudiantes.</p>
+        </div>
+
+        <h3>Vínculo con la comunidad</h3>
+        <p>Muchas veces los docentes también participan de actividades que conectan lo aprendido en el aula con problemáticas o proyectos de la localidad, buscando que los conocimientos sirvan también para transformar positivamente el entorno.</p>
+    </div>
+</div>
+
+<div class="pantalla" id="carreras">
+    <header class="cabecera">
+        <div class="logo-texto">
+            <div class="logo">
+                <div class="bloque"><div class="simbolo libro"></div></div>
+                <div class="bloque"><div class="simbolo manos"></div></div>
+                <div class="bloque"><div class="simbolo nodos"></div></div>
+            </div>
+            <div class="nombre-escuela">EPGS N°12</div>
+        </div>
+        <div class="menu-hamburguesa" onclick="alternarMenu()">☰</div>
+    </header>
+    <div class="contenido-interno">
+        <div class="volver" onclick="abrir('inicio')">← Volver a la pantalla principal</div>
+        <h2>Carreras y Propuestas de Formación</h2>
+        <p>Actualmente la institución dicta dos carreras principales de nivel terciario, con planes de estudio oficiales y aprobados, con una duración de tres años cada una:</p>
+
+        <div class="recuadro">
+            <h3>Tecnicatura en Desarrollo de Software</h3>
+            <p><strong>Duración:</strong> 3 años</p>
+            <p><strong>Perfil profesional:</strong> Forma profesionales capaces de diseñar, desarrollar, implementar y mantener sistemas informáticos, aplicaciones y páginas web. Adquieren conocimientos sobre lenguajes de programación, bases de datos, diseño y seguridad informática.</p>
+            <p><strong>Salida laboral:</strong> Puede desempeñarse en empresas de tecnología, organismos públicos, estudios de desarrollo, o trabajar de forma independiente realizando proyectos propios o para terceros.</p>
+        </div>
+
+        <div class="recuadro">
+            <h3>Tecnicatura en Seguridad e Higiene Laboral</h3>
+            <p><strong>Duración:</strong> 3 años</p>
+            <p><strong>Perfil profesional:</strong> Prepara profesionales capacitados para identificar, prevenir y controlar riesgos laborales, promoviendo la seguridad y la salud de las personas en los lugares de trabajo. Conocen sobre normativas vigentes, condiciones ambientales, equipos de protección y planes de emergencia.</p>
+            <p><strong>Salida laboral:</strong> Puede trabajar en industrias, empresas de servicios, obras de construcción, organismos públicos, consultoras, o asesorando a organizaciones de distinto tipo.</p>
+        </div>
+
+        <p style="margin-top: 1rem;">Periódicamente se evalúa la posibilidad de incorporar nuevas carreras o cursos cortos según las necesidades que vayan surgiendo en la comunidad.</p>
+    </div>
+</div>
+
+<div class="pantalla" id="preinscripcion">
+    <header class="cabecera">
+        <div class="logo-texto">
+            <div class="logo">
+                <div class="bloque"><div class="simbolo libro"></div></div>
+                <div class="bloque"><div class="simbolo manos"></div></div>
+                <div class="bloque"><div class="simbolo nodos"></div></div>
+            </div>
+            <div class="nombre-escuela">EPGS N°12</div>
+        </div>
+        <div class="menu-hamburguesa" onclick="alternarMenu()">☰</div>
+    </header>
+    <div class="contenido-interno">
+        <div class="volver" onclick="abrir('inicio')">← Volver a la pantalla principal</div>
+        <h2>Preinscripción e Inscripción</h2>
+
+        <h3>Cronograma General</h3>
+        <p>Las preinscripciones suelen abrirse a partir de mediados de noviembre y se extienden hasta principios de febrero de cada año. Las inscripciones definitivas se realizan durante el mes de febrero, fechas que se confirman anualmente según el calendario oficial del Ministerio de Educación. Te recomendamos consultar cerca de esas fechas en la secretaría o por nuestras redes sociales para conocer las fechas exactas del período vigente.</p>
+
+        <div class="recuadro">
+            <h3>Requisitos Generales</h3>
+            <ul>
+                <li>Ser mayor de 18 años o contar con la autorización correspondiente en caso de ser menor.</li>
+                <li>Para carreras de nivel superior: contar con el título de Nivel Secundario completo o certificado de finalización en trámite.</li>
+                <li>Documento Nacional de Identidad (DNI) original y fotocopia de las dos primeras hojas.</li>
+                <li>Partida de nacimiento actualizada (original y fotocopia).</li>
+                <li>Certificado de residencia en la zona o comprobante de domicilio.</li>
+                <li>Dos fotos tipo carnet, tamaño 4x4 cm, de frente y fondo claro.</li>
+                <li>Certificado de salud o ficha médica según corresponda.</li>
+            </ul>
+        </div>
+
+        <h3>Procedimiento</h3>
+        <p>Primero se realiza la preinscripción, donde se registran los datos personales y la carrera elegida. Luego, en la etapa de inscripción definitiva, se presentan todos los documentos en la secretaría de la institución en el horario de atención. Una vez verificada la documentación, se confirma el ingreso y se informa sobre el inicio de clases, horarios y materiales necesarios.</p>
+
+        <h3>Consultas y Ayuda</h3>
+        <p>Si tenés alguna duda sobre los requisitos, tu situación particular o necesitas información adicional, podés acercarte personalmente a la sede en el horario de atención, llamar al teléfono institucional o escribirnos a nuestras redes oficiales para orientarte paso a paso.</p>
+    </div>
+</div>
+
+<div class="pantalla" id="galeria">
+    <header class="cabecera">
+        <div class="logo-texto">
+            <div class="logo">
+                <div class="bloque"><div class="simbolo libro"></div></div>
+                <div class="bloque"><div class="simbolo manos"></div></div>
+                <div class="bloque"><div class="simbolo nodos"></div></div>
+            </div>
+            <div class="nombre-escuela">EPGS N°12</div>
+        </div>
+        <div class="menu-hamburguesa" onclick="alternarMenu()">☰</div>
+    </header>
+    <div class="contenido-interno">
+        <div class="volver" onclick="abrir('inicio')">← Volver a la pantalla principal</div>
+        <p class="continuara">CONTINUARA......</p>
+    </div>
+</div>
+
+<div class="pantalla" id="preguntas">
+    <header class="cabecera">
+        <div class="logo-texto">
+            <div class="logo">
+                <div class="bloque"><div class="simbolo libro"></div></div>
+                <div class="bloque"><div class="simbolo manos"></div></div>
+                <div class="bloque"><div class="simbolo nodos"></div></div>
+            </div>
+            <div class="nombre-escuela">EPGS N°12</div>
+        </div>
+        <div class="menu-hamburguesa" onclick="alternarMenu()">☰</div>
+    </header>
+    <div class="contenido-interno">
+        <div class="volver" onclick="abrir('inicio')">← Volver a la pantalla principal</div>
+        <h2>Preguntas Frecuentes y Ayuda</h2>
+
+        <div class="recuadro">
+            <p><strong>¿Las carreras o cursos que se dictan tienen algún costo o son pagos?</strong><br>No, toda la educación que se brinda en esta institución es totalmente pública y gratuita, no se paga arancel ni matrícula para cursar.</p>
+        </div>
+
+        <div class="recuadro">
+            <p><strong>¿Los títulos que se entregan tienen validez oficial?</strong><br>Sí, todos los títulos y certificaciones que se otorgan cuentan con el respaldo oficial del Ministerio de Educación de la Provincia del Chaco y tienen validez en todo el territorio nacional.</p>
+        </div>
+
+        <div class="recuadro">
+            <p><strong>¿Es obligatorio tener el secundario completo para inscribirse?</strong><br>Para las carreras de nivel superior generalmente se requiere haber finalizado los estudios de nivel secundario o su equivalente; si tenés alguna situación particular podés consultar personalmente para ver qué alternativas existen.</p>
+        </div>
+
+        <div class="recuadro">
+            <p><strong>¿Cuándo abren las inscripciones?</strong><br>Por lo general se abren al finalizar cada año, entre diciembre y febrero, pero te sugerimos consultar cerca de esas fechas en la secretaría de la escuela para conocer el cronograma exacto del año en curso.</p>
+        </div>
+
+        <div class="recuadro">
+            <p><strong>¿Hay exámenes libres o formas de rendir materias adeudadas?</strong><br>Sí, existen sistemas de evaluación y formas de recuperar o rendir materias, que se rigen por la normativa vigente y los calendarios académicos; podés consultar las condiciones específicas según tu situación.</p>
+        </div>
+
+        <p style="margin-top: 1rem;">Si tu consulta no está aquí planteada, podés acercarte personalmente en el horario de atención, llamar al teléfono indicado o escribirnos a nuestros canales oficiales para responderte con mayor detalle.</p>
+    </div>
+</div>
+
+
+<div class="pantalla" id="contacto">
+    <header class="cabecera">
+        <div class="logo-texto"><div class="nombre-escuela">EPGS N°12</div></div>
+    </header>
+    <div class="contenido-interno">
+        <div class="volver" onclick="abrir('inicio')">← Volver a la pantalla principal</div>
+        <p class="continuara">CONTINUARA......</p>
+    </div>
+</div>
+
+<footer class="pie-pagina">
+    <strong>Escuela Pública de Gestión Social N°12 "Juan Domingo Perón"</strong><br>
+    Sede Central: Mitre 490, Resistencia | Sede Anexo: Córdoba 83 (entre San Martín y Rivadavia), Quitilipi - Chaco, Argentina<br>
+    Teléfono: (0364) 488-0000
+    <div class="redes">
+        <a href="#" target="_blank"> Facebook</a>
+        <a href="#" target="_blank"> Instagram</a>
+    </div>
+    © Todos los derechos reservados - Año 2026
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

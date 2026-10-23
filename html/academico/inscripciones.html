@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información y formulario de preinscripción de la E.P.G.S. N.º 12 Juan Domingo Perón.">
+    <title>Preinscripciones | E.P.G.S. N.º 12</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pagina-inscripciones">
+    <header class="inicio-cabecera">
+        <a class="marca-institucional" href="index.html" aria-label="Inicio - E.P.G.S. N.º 12">
+            <img src="logos%20.png" alt="E.P.G.S. N.º 12 Juan Domingo Perón y Nivel Superior">
+        </a>
+        <a class="inscripciones-volver" href="index.html">← Volver al inicio</a>
+    </header>
+    <div class="franja-institucional" aria-hidden="true"></div>
+
+    <main>
+        <section class="inscripciones-portada" aria-labelledby="titulo-inscripciones">
+            <div class="inscripciones-portada-contenido">
+                <p class="inscripciones-etiqueta">E.P.G.S. N.º 12 · Juan Domingo Perón</p>
+                <h1 id="titulo-inscripciones">Preinscripciones</h1>
+                <p>Empezá tu camino de formación. Conocé el proceso y dejanos tus datos de contacto.</p>
+            </div>
+        </section>
+
+        <div class="inscripciones-contenido">
+            <section class="inscripciones-informacion" aria-labelledby="titulo-informacion">
+                <div class="inscripciones-cabecera-seccion">
+                    <p class="propuesta-etiqueta">Información importante</p>
+                    <h2 id="titulo-informacion">¿Cómo es el proceso?</h2>
+                    <p>La preinscripción permite expresar tu interés en una propuesta. La inscripción definitiva se completa en la institución.</p>
+                </div>
+
+                <div class="inscripciones-datos">
+                    <article class="inscripciones-recuadro">
+                        <h3>Cronograma orientativo</h3>
+                        <p>Las preinscripciones suelen abrirse desde mediados de noviembre hasta principios de febrero. La inscripción definitiva se realiza durante febrero. Las fechas exactas se confirman cada año según el calendario oficial.</p>
+                    </article>
+
+                    <article class="inscripciones-recuadro">
+                        <h3>Propuestas disponibles</h3>
+                        <ul>
+                            <li>Tecnicatura Superior en Desarrollo de Software.</li>
+                            <li>Tecnicatura Superior en Seguridad e Higiene Laboral.</li>
+                            <li>Cursos y capacitaciones, según la oferta vigente.</li>
+                        </ul>
+                    </article>
+
+                    <article class="inscripciones-recuadro">
+                        <h3>Requisitos para la inscripción definitiva</h3>
+                        <ul>
+                            <li>DNI y fotocopia.</li>
+                            <li>Título secundario o constancia de finalización en trámite para carreras de Nivel Superior.</li>
+                            <li>Partida de nacimiento actualizada.</li>
+                            <li>Comprobante de domicilio o residencia.</li>
+                            <li>Dos fotos tipo carnet y certificado de salud o ficha médica, según corresponda.</li>
+                        </ul>
+                    </article>
+
+                    <p class="inscripciones-nota">La preinscripción no confirma una vacante ni reemplaza la presentación de documentación. La educación brindada por la institución es pública y gratuita.</p>
+                </div>
+            </section>
+
+            <section class="inscripciones-formulario-seccion" aria-labelledby="titulo-formulario">
+                <div class="inscripciones-cabecera-seccion">
+                    <p class="propuesta-etiqueta">Primer paso</p>
+                    <h2 id="titulo-formulario">Formulario de preinscripción</h2>
+                    <p>Completá tus datos para manifestar interés en una propuesta educativa.</p>
+                </div>
+
+                <p class="inscripciones-aviso">Este formulario todavía no está conectado a un servidor: los datos no se envían ni se guardan. Para formalizar la preinscripción, comunicate con la institución.</p>
+
+                <form id="formularioPreinscripcion" class="inscripciones-formulario">
+                    <div class="inscripciones-campo">
+                        <label for="nombreCompleto">Nombre y apellido</label>
+                        <input id="nombreCompleto" name="nombreCompleto" type="text" autocomplete="name" maxlength="120" required>
+                    </div>
+
+                    <div class="inscripciones-fila">
+                        <div class="inscripciones-campo">
+                            <label for="dni">DNI</label>
+                            <input id="dni" name="dni" type="text" inputmode="numeric" autocomplete="off" pattern="[0-9]{7,8}" maxlength="8" aria-describedby="ayudaDni" required>
+                            <small id="ayudaDni">Ingresá 7 u 8 números, sin puntos.</small>
+                        </div>
+                        <div class="inscripciones-campo">
+                            <label for="fechaNacimiento">Fecha de nacimiento</label>
+                            <input id="fechaNacimiento" name="fechaNacimiento" type="date" autocomplete="bday" required>
+                        </div>
+                    </div>
+
+                    <div class="inscripciones-fila">
+                        <div class="inscripciones-campo">
+                            <label for="correo">Correo electrónico</label>
+                            <input id="correo" name="correo" type="email" autocomplete="email" maxlength="160" required>
+                        </div>
+                        <div class="inscripciones-campo">
+                            <label for="telefono">Teléfono de contacto</label>
+                            <input id="telefono" name="telefono" type="tel" autocomplete="tel" maxlength="30" required>
+                        </div>
+                    </div>
+
+                    <div class="inscripciones-campo">
+                        <label for="localidad">Localidad de residencia</label>
+                        <input id="localidad" name="localidad" type="text" autocomplete="address-level2" maxlength="100" required>
+                    </div>
+
+                    <div class="inscripciones-fila">
+                        <div class="inscripciones-campo">
+                            <label for="propuesta">Propuesta de interés</label>
+                            <select id="propuesta" name="propuesta" required>
+                                <option value="" selected disabled>Seleccioná una propuesta</option>
+                                <option value="desarrollo-software">Tecnicatura en Desarrollo de Software</option>
+                                <option value="seguridad-higiene">Tecnicatura en Seguridad e Higiene Laboral</option>
+                                <option value="cursos">Cursos y capacitaciones</option>
+                                <option value="sin-definir">Todavía no lo decidí</option>
+                            </select>
+                        </div>
+                        <div class="inscripciones-campo">
+                            <label for="sede">Sede de interés</label>
+                            <select id="sede" name="sede" required>
+                                <option value="" selected disabled>Seleccioná una sede</option>
+                                <option value="resistencia">Resistencia</option>
+                                <option value="quitilipi">Quitilipi</option>
+                                <option value="indistinta">Me es indistinto</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="inscripciones-campo">
+                        <label for="estudiosSecundarios">Situación de estudios secundarios</label>
+                        <select id="estudiosSecundarios" name="estudiosSecundarios" required>
+                            <option value="" selected disabled>Seleccioná una opción</option>
+                            <option value="completos">Completos</option>
+                            <option value="en-tramite">Finalizados, título en trámite</option>
+                            <option value="cursando">Aún cursando</option>
+                            <option value="otro">Otra situación</option>
+                        </select>
+                    </div>
+
+                    <div class="inscripciones-campo">
+                        <label for="consulta">Consulta o comentario <span>(opcional)</span></label>
+                        <textarea id="consulta" name="consulta" rows="4" maxlength="1000" placeholder="Contanos si necesitás orientación sobre alguna propuesta."></textarea>
+                    </div>
+
+                    <label class="inscripciones-consentimiento">
+                        <input type="checkbox" name="confirmacion" required>
+                        <span>Confirmo que la información ingresada es correcta y entiendo que este formulario no reemplaza la inscripción definitiva.</span>
+                    </label>
+
+                    <p id="estadoPreinscripcion" class="inscripciones-estado" role="status" aria-live="polite"></p>
+                    <button class="inscripciones-boton" type="submit">Revisar preinscripción <span aria-hidden="true">→</span></button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <strong>Escuela Pública de Gestión Social N.º 12 “Juan Domingo Perón”</strong><br>
+        Sede Central: Mitre 490, Resistencia | Sede Anexo: Córdoba 83 (entre San Martín y Rivadavia), Quitilipi - Chaco, Argentina<br>
+        Teléfono: (0364) 488-0000
+        <div class="redes">
+            <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        © Todos los derechos reservados - Año 2026
+    </footer>
+
+    <script src="inscripciones.js"></script>
+</body>
+</html>

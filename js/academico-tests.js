@@ -1,7 +1,7 @@
 /* Pruebas del motor SQL: resultados esperados calculados a mano. */
-// Ejecutar con:  node tests.js
-const SQL = require("./sql.js");
-const DATA = require("./data.js");
+// Ejecutar con:  node academico-tests.js
+const SQL = require("./academico-sql.js");
+const DATA = require("./academico-data.js");
 
 const db = SQL.crearBase(DATA);
 

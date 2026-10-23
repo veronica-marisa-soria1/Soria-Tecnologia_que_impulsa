@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prototipo de ChacoAgro IA, una propuesta AgriTech EBT Chaco para acompañar decisiones productivas en el NEA.">
+  <meta name="theme-color" content="#f4f6ef">
+  <title>ChacoAgro IA | Decisiones con datos</title>
+  <link rel="icon" href="../assets/img/soria-isotipo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../css/chacoagro.css">
+  <script src="../js/chacoagro.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="topbar">
+    <a class="brand" href="index.html#proyectos" aria-label="Volver a los proyectos de SORIA"><span class="brand-mark">C<span>.</span></span><span><strong>ChacoAgro</strong><small>INTELIGENCIA EN TERRITORIO</small></span></a>
+    <div class="topbar-actions"><span class="prototype"><i></i>Prototipo EBT Chaco</span><a href="index.html#proyectos">Salir <span aria-hidden="true">↗</span></a></div>
+  </header>
+
+  <main class="app" id="contenido">
+    <nav class="tabs" role="tablist" aria-label="Secciones de ChacoAgro IA">
+      <button class="tab" type="button" role="tab" aria-selected="true" aria-controls="panel-resumen" data-tab="resumen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1z"/></svg><span>Resumen</span></button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-clima" data-tab="clima" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A4.5 4.5 0 0 0 17 7a6 6 0 0 0-11.6 1.8A3.7 3.7 0 0 0 6 16h11M8 19l-1 2m6-2-1 2m6-2-1 2"/></svg><span>Clima</span></button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-lotes" data-tab="lotes" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6M8 10h.01M12 10h.01M16 10h.01"/></svg><span>Lotes</span></button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-mercado" data-tab="mercado" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 14l4-4 4 3 6-7M17 6h4v4"/></svg><span>Mercado</span></button>
+    </nav>
+
+    <div class="panels">
+      <section class="panel" id="panel-resumen" role="tabpanel" data-panel="resumen">
+        <div class="welcome"><div><p class="eyebrow">VIERNES, 23 DE OCTUBRE</p><h1>Buen día, productora.</h1><p>Una mirada clara para decidir el próximo paso en tu campo.</p></div><label class="field-select"><span>CAMPO ACTIVO</span><select data-field-select aria-label="Seleccionar campo"><option value="esperanza">La Esperanza</option><option value="ombu">El Ombú</option></select></label></div>
+        <article class="field-image"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=85" alt="Cultivo extensivo bajo la luz cálida del atardecer"><div class="image-shade"></div><div class="image-copy"><span class="location">⌖ QUITILIPI · CHACO</span><h2 data-field-name>La Esperanza <span>· Lote 3</span></h2><p data-crop-name>Maíz temprano <span>· V6, crecimiento vegetativo</span></p></div><small>Imagen ilustrativa</small></article>
+        <div class="metrics"><article><span>PRÓXIMAS 24 H</span><strong>24° <i>↗</i></strong><small>Parcialmente nublado</small></article><article><span>LLUVIA</span><strong>70<em>%</em></strong><small>Probabilidad estimada</small></article><article><span>HUMEDAD DEL SUELO</span><strong data-soil>68<em>%</em></strong><small>Última lectura: hace 2 h</small></article><article><span>ESTADO DEL LOTE</span><strong class="risk"><i></i><b data-risk>Riesgo bajo</b></strong><small>Sin alertas críticas</small></article></div>
+        <div class="dashboard-grid">
+          <section><div class="section-title"><div><p class="eyebrow">LECTURA DEL LOTE</p><h2>Señales para decidir</h2></div><span class="sample-tag">DATOS DE MUESTRA</span></div><article class="insight"><span class="insight-icon" aria-hidden="true">⌁</span><div><span class="eyebrow">VENTANA DE MANEJO</span><h3 data-insight-title>Buenas condiciones para recorrer el lote</h3><p data-insight>La humedad estimada y el pronóstico sugieren priorizar el monitoreo de malezas antes de una nueva lluvia.</p><small><i></i> Coincidencia de señales: alta</small></div></article>
+            <div class="section-title agenda-title"><div><p class="eyebrow">PARA HOY</p><h2>Agenda de campo</h2></div><span class="subtle">2 tareas</span></div><ol class="agenda"><li><time>08:30</time><div><strong>Recorrer lote de maíz</strong><small>Revisar malezas en cabeceras</small></div><i class="priority" aria-label="Prioridad alta"></i></li><li><time>16:00</time><div><strong>Confirmar pronóstico</strong><small>Actualizar planificación de labores</small></div><i aria-label="Prioridad normal"></i></li></ol>
+          </section>
+          <aside class="side-cards"><section class="weather-card"><div class="section-title"><div><p class="eyebrow">CLIMA LOCAL</p><h2>Lluvia en camino</h2></div><span class="weather-icon" aria-hidden="true">☁</span></div><p>Posibles precipitaciones por la tarde. Revisá el estado de los caminos antes de mover maquinaria.</p><div class="rain-label"><span>Probabilidad</span><strong>70%</strong></div><div class="rain-bar"><i></i></div><button class="text-action" type="button" data-go="clima">Ver pronóstico <span>→</span></button></section>
+            <section class="market-card"><div class="section-title"><div><p class="eyebrow">REFERENCIA REGIONAL</p><h2>Mercado</h2></div><span class="subtle">MUESTRA</span></div><div class="price"><span>Soja</span><strong>ARS 485.000</strong><small>/ t</small></div><div class="price"><span>Maíz</span><strong>ARS 265.000</strong><small>/ t</small></div><button class="text-action" type="button" data-go="mercado">Ver referencias <span>→</span></button></section></aside>
+        </div>
+        <p class="disclaimer"><i>i</i> Prototipo EBT Chaco. Clima, humedad, precios y recomendaciones son datos demostrativos; no reemplazan fuentes oficiales ni asesoramiento profesional.</p>
+      </section>
+
+      <section class="panel" id="panel-clima" role="tabpanel" data-panel="clima" hidden><div class="page-title"><p class="eyebrow">CLIMA LOCAL · QUITILIPI</p><h1>El tiempo en tu zona</h1><p>Una referencia para planificar labores y recorridas.</p></div><article class="today"><div><span>HOY · DATOS DE MUESTRA</span><strong>24°</strong><p>Parcialmente nublado</p></div><div><span>Prob. de lluvia <b>70%</b></span><span>Viento <b>12 km/h</b></span><span>Humedad <b>76%</b></span></div></article><section class="subsection"><div class="section-title"><div><p class="eyebrow">PRÓXIMOS DÍAS</p><h2>Pronóstico semanal</h2></div><span class="sample-tag">REFERENCIAL</span></div><div class="forecast"><article><b>Hoy</b><i>☁</i><span>70% lluvia</span><strong>28° <small>19°</small></strong></article><article><b>Sáb 24</b><i>🌦</i><span>40% lluvia</span><strong>27° <small>18°</small></strong></article><article><b>Dom 25</b><i>☀</i><span>Despejado</span><strong>30° <small>20°</small></strong></article><article><b>Lun 26</b><i>☀</i><span>Despejado</span><strong>31° <small>21°</small></strong></article><article><b>Mar 27</b><i>⛅</i><span>Parcial</span><strong>29° <small>20°</small></strong></article></div></section><p class="disclaimer"><i>i</i> Pronóstico ilustrativo, no conectado a estaciones meteorológicas.</p></section>
+
+      <section class="panel" id="panel-lotes" role="tabpanel" data-panel="lotes" hidden><div class="page-title"><p class="eyebrow">SEGUIMIENTO PRODUCTIVO</p><h1>Tus lotes</h1><p>Estado general del establecimiento seleccionado.</p></div><label class="field-select lot-select"><span>CAMPO ACTIVO</span><select data-field-select aria-label="Seleccionar campo"><option value="esperanza">La Esperanza</option><option value="ombu">El Ombú</option></select></label><article class="lot-card"><header><div><span>LOTE SELECCIONADO</span><h2 data-lot-detail>La Esperanza · Lote 3</h2></div><span class="active-status"><i></i>Seguimiento activo</span></header><div class="lot-details"><div><span>Cultivo</span><strong data-lot-crop>Maíz temprano</strong></div><div><span>Estado fenológico</span><strong data-lot-stage>V6 · crecimiento vegetativo</strong></div><div><span>Humedad estimada</span><strong data-lot-soil>68%</strong></div><div><span>Riesgo actual</span><strong data-lot-risk>Bajo</strong></div></div></article><article class="field-note"><span>OBSERVACIÓN SUGERIDA</span><h2 data-lot-note>Recorrer cabeceras después de las lluvias</h2><p>Las observaciones de campo ayudan a contextualizar los indicadores y mejorar la planificación.</p></article><p class="disclaimer"><i>i</i> Los lotes e indicadores son ficticios y se muestran solo para este prototipo.</p></section>
+
+      <section class="panel" id="panel-mercado" role="tabpanel" data-panel="mercado" hidden><div class="page-title"><p class="eyebrow">REFERENCIAS DEL NEA</p><h1>Mercado regional</h1><p>Valores ilustrativos para mostrar cómo podría organizarse la información.</p></div><section class="subsection"><div class="section-title"><div><p class="eyebrow">GRANOS</p><h2>Precios de referencia</h2></div><span class="sample-tag">DATOS FICTICIOS</span></div><div class="market-table"><div class="table-row table-head"><span>Producto</span><span>Referencia</span><span>Unidad</span></div><div class="table-row"><strong>Soja</strong><span>ARS 485.000</span><small>por tonelada</small></div><div class="table-row"><strong>Maíz</strong><span>ARS 265.000</span><small>por tonelada</small></div><div class="table-row"><strong>Trigo</strong><span>ARS 310.000</span><small>por tonelada</small></div><div class="table-row"><strong>Algodón</strong><span>ARS 1.420.000</span><small>por tonelada</small></div></div><p class="subtle table-note">Actualización de ejemplo · 23 oct 2026. No usar como cotización comercial.</p></section><p class="disclaimer"><i>i</i> Los precios no provienen de mercados ni fuentes oficiales.</p></section>
+    </div>
+    <footer class="app-footer"><span>CHACOAGRO IA · PROPUESTA EBT CHACO</span><a href="index.html#proyectos">Un proyecto de SORIA <span>↗</span></a></footer>
+  </main>
+</body>
+</html>

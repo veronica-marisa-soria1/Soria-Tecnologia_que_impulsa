@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Novedades y noticias de la E.P.G.S. N.º 12 Juan Domingo Perón.">
+    <title>Noticias | E.P.G.S. N.º 12</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pagina-noticias">
+    <header class="inicio-cabecera">
+        <a class="marca-institucional" href="index.html" aria-label="Inicio - E.P.G.S. N.º 12">
+            <img src="logos%20.png" alt="E.P.G.S. N.º 12 Juan Domingo Perón y Nivel Superior">
+        </a>
+        <a class="noticias-volver" href="index.html">← Volver al inicio</a>
+    </header>
+    <div class="franja-institucional" aria-hidden="true"></div>
+
+    <main>
+        <section class="noticias-portada" aria-labelledby="titulo-noticias">
+            <div class="noticias-portada-contenido">
+                <p class="noticias-etiqueta">E.P.G.S. N.º 12 · Juan Domingo Perón</p>
+                <h1 id="titulo-noticias">Noticias de nuestra institución</h1>
+                <p>Actividades, proyectos y novedades de nuestra comunidad educativa.</p>
+            </div>
+        </section>
+
+        <div class="noticias-contenido">
+            <section class="noticias-editor" aria-labelledby="titulo-publicar">
+                <div class="noticias-seccion-cabecera">
+                    <p class="propuesta-etiqueta">Panel institucional</p>
+                    <h2 id="titulo-publicar">Publicar una noticia</h2>
+                    <p>Completá los datos para sumar una novedad al listado de la institución.</p>
+                </div>
+
+                <p class="noticias-aviso">Las noticias se guardan en este navegador y dispositivo. Para compartirlas con otras personas, el sitio necesita conectarse a un servidor.</p>
+
+                <form id="formularioNoticia" class="noticias-formulario">
+                    <div class="noticias-campo">
+                        <label for="tituloNoticia">Título</label>
+                        <input id="tituloNoticia" name="titulo" type="text" maxlength="100" required placeholder="Ej.: Jornada de puertas abiertas">
+                    </div>
+
+                    <div class="noticias-campos-fila">
+                        <div class="noticias-campo">
+                            <label for="categoriaNoticia">Categoría</label>
+                            <select id="categoriaNoticia" name="categoria" required>
+                                <option value="Institucional">Institucional</option>
+                                <option value="Nivel Superior">Nivel Superior</option>
+                                <option value="Cursos">Cursos</option>
+                                <option value="Comunidad">Comunidad</option>
+                            </select>
+                        </div>
+                        <div class="noticias-campo">
+                            <label for="fechaNoticia">Fecha</label>
+                            <input id="fechaNoticia" name="fecha" type="date" required>
+                        </div>
+                    </div>
+
+                    <div class="noticias-campo">
+                        <label for="resumenNoticia">Resumen</label>
+                        <textarea id="resumenNoticia" name="resumen" rows="3" maxlength="220" required placeholder="Una breve descripción para presentar la noticia."></textarea>
+                    </div>
+
+                    <div class="noticias-campo">
+                        <label for="contenidoNoticia">Contenido</label>
+                        <textarea id="contenidoNoticia" name="contenido" rows="6" maxlength="3000" required placeholder="Compartí los detalles de la novedad."></textarea>
+                    </div>
+
+                    <div class="noticias-campo">
+                        <label for="imagenNoticia">Imagen <span>(opcional, JPG, PNG o WebP; máximo 1,5 MB)</span></label>
+                        <input id="imagenNoticia" name="imagen" type="file" accept="image/jpeg,image/png,image/webp">
+                        <img id="vistaPreviaNoticia" class="noticias-vista-previa" alt="Vista previa de la imagen seleccionada" hidden>
+                    </div>
+
+                    <p id="estadoFormularioNoticia" class="noticias-estado" role="status" aria-live="polite"></p>
+                    <button class="noticias-boton-publicar" type="submit">Publicar noticia <span aria-hidden="true">→</span></button>
+                </form>
+            </section>
+
+            <section class="noticias-listado" aria-labelledby="titulo-listado">
+                <div class="noticias-seccion-cabecera">
+                    <p class="propuesta-etiqueta">Comunidad educativa</p>
+                    <h2 id="titulo-listado">Últimas noticias</h2>
+                    <p>Conocé lo que sucede en nuestras sedes y propuestas educativas.</p>
+                    <p id="contadorNoticias" class="noticias-contador" aria-live="polite"></p>
+                </div>
+                <div id="listadoNoticias" class="noticias-tarjetas" aria-live="polite">
+                    <p class="noticias-vacio">Todavía no hay noticias publicadas. ¡Podés compartir la primera!</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <strong>Escuela Pública de Gestión Social N.º 12 “Juan Domingo Perón”</strong><br>
+        Sede Central: Mitre 490, Resistencia | Sede Anexo: Córdoba 83 (entre San Martín y Rivadavia), Quitilipi - Chaco, Argentina<br>
+        Teléfono: (0364) 488-0000
+        <div class="redes">
+            <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        © Todos los derechos reservados - Año 2026
+    </footer>
+
+    <script src="noticias.js"></script>
+</body>
+</html>

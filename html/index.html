@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SORIA crea sitios web, soluciones digitales y sistemas a medida para transformar buenas ideas en experiencias que avanzan.">
+  <title>SORIA | Tecnología que impulsa</title>
+  <link rel="canonical" href="https://veronica-marisa-soria1.github.io/WebMorph.dev/html/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SORIA">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:url" content="https://veronica-marisa-soria1.github.io/WebMorph.dev/html/">
+  <meta property="og:title" content="SORIA | Tecnología que impulsa">
+  <meta property="og:description" content="Sitios web, soluciones digitales y sistemas a medida para impulsar tus ideas.">
+  <meta property="og:image" content="https://veronica-marisa-soria1.github.io/WebMorph.dev/assets/img/soria-logo-principal.png">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="SORIA — Tecnología que impulsa.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SORIA | Tecnología que impulsa">
+  <meta name="twitter:description" content="Sitios web, soluciones digitales y sistemas a medida para impulsar tus ideas.">
+  <meta name="twitter:image" content="https://veronica-marisa-soria1.github.io/WebMorph.dev/assets/img/soria-logo-principal.png">
+  <link rel="icon" href="../assets/img/soria-isotipo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/img/soria-isotipo.png" sizes="512x512">
+  <meta name="theme-color" content="#07182F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <script>
+    (() => {
+      const root = document.documentElement;
+      try {
+        const savedTheme = localStorage.getItem("wm-theme");
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        root.dataset.theme = savedTheme || systemTheme;
+      } catch {
+        root.dataset.theme = "light";
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/styles.css?v=20261023-2">
+  <script src="../js/main.js?v=20261023-2" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header" id="inicio">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="SORIA, ir al inicio">
+        <picture>
+          <source media="(max-width: 640px)" srcset="../assets/img/soria-isotipo.svg">
+          <img src="../assets/img/soria-logo-principal.svg" alt="SORIA" width="176" height="66">
+        </picture>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="sr-only">Abrir menú</span>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#enfoque">Enfoque</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a class="nav-cta" href="#contacto">Hablemos</a></li>
+        <li class="theme-menu-item">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro">
+            <svg class="theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <span class="sr-only" id="theme-toggle-label">Cambiar a modo oscuro</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span>SORIA · SOLUCIONES DIGITALES</p>
+        <h1 id="hero-title">Tecnología que impulsa tu <em>próxima historia.</em></h1>
+        <p class="hero-copy">Diseñamos y desarrollamos experiencias digitales claras, humanas y preparadas para acompañar el crecimiento de tu idea.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contacto">Contame tu idea <span aria-hidden="true">↗</span></a>
+          <a class="button button-ghost" href="#servicios">Conocé nuestros servicios</a>
+        </div>
+        <ul class="hero-points" aria-label="Propuesta de valor">
+          <li>Diseño con propósito</li><li>Desarrollo a medida</li><li>Comunicación cercana</li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+        <button class="brand-orb" type="button" aria-label="Animar el isotipo de SORIA"><img src="../assets/img/soria-isotipo.svg" alt="" width="250" height="250"></button>
+        <div class="floating-label label-one" aria-hidden="true"><span>01</span> IDEA</div>
+        <div class="floating-label label-two" aria-hidden="true"><span>02</span> IMPULSO</div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="servicios" aria-labelledby="services-title">
+      <div class="section-intro">
+        <p class="eyebrow eyebrow-dark"><span></span>LO QUE HACEMOS</p>
+        <h2 id="services-title">Soluciones que convierten una idea en movimiento.</h2>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-number">01</div>
+          <h3>Sitios web con intención</h3>
+          <p>Landing pages y sitios institucionales que explican tu valor, inspiran confianza y hacen simple el siguiente paso.</p>
+          <ul><li>Diseño responsive</li><li>SEO técnico inicial</li><li>Accesibilidad</li></ul>
+        </article>
+        <article class="service-card service-card-featured">
+          <div class="service-number">02</div>
+          <h3>Productos y sistemas a medida</h3>
+          <p>Herramientas digitales pensadas alrededor de tus procesos: claras para las personas y sólidas para tu negocio.</p>
+          <ul><li>Paneles de gestión</li><li>Automatización</li><li>Bases de datos</li></ul>
+        </article>
+        <article class="service-card">
+          <div class="service-number">03</div>
+          <h3>Presencia digital que evoluciona</h3>
+          <p>Una base visual y técnica que puede crecer con vos, sin perder consistencia en cada punto de contacto.</p>
+          <ul><li>Identidad aplicada</li><li>Optimización web</li><li>Acompañamiento</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section approach-section" id="enfoque" aria-labelledby="approach-title">
+      <div class="approach-copy">
+        <p class="eyebrow"><span></span>NUESTRO ENFOQUE</p>
+        <h2 id="approach-title">La tecnología es mejor cuando se siente sencilla.</h2>
+        <p>No se trata de sumar funciones porque sí. Se trata de entender qué querés lograr, ordenar lo importante y construir una experiencia que tus clientes disfruten usar.</p>
+        <a class="text-link" href="#contacto">Empecemos por tu objetivo <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="principles" aria-label="Principios de trabajo">
+        <article><span class="principle-icon">↗</span><h3>Con dirección</h3><p>Cada decisión responde a una necesidad real de tu proyecto.</p></article>
+        <article><span class="principle-icon">◎</span><h3>Con claridad</h3><p>Hablamos simple, mostramos avances y decidimos en conjunto.</p></article>
+        <article><span class="principle-icon">✦</span><h3>Con proyección</h3><p>Construimos una base lista para acompañar tu próximo paso.</p></article>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="proyectos" aria-labelledby="projects-title">
+      <div class="section-intro projects-intro">
+        <p class="eyebrow eyebrow-dark"><span></span>PROYECTOS</p>
+        <h2 id="projects-title">Ideas que ya están tomando forma.</h2>
+        <p>Una muestra de soluciones creadas para resolver, organizar y acercar valor.</p>
+      </div>
+      <div class="projects-grid">
+        <a class="project-card project-mh" href="mh-gestion.html" aria-label="Abrir prototipo de MH Gestión">
+          <img class="project-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85" alt="Panel de análisis y métricas en una pantalla" loading="lazy" decoding="async">
+          <div class="project-top"><span>01 / GESTIÓN</span><span>PYTHON · DJANGO</span></div>
+          <div class="project-monogram">MH</div>
+          <div class="project-content"><h3>MH Gestión</h3><p>Un sistema para ordenar clientes, productos, ventas y las operaciones de todos los días.</p><span class="project-demo-link">Explorar prototipo <span aria-hidden="true">↗</span></span></div>
+        </a>
+        <a class="project-card project-ia" href="chacoagro.html" aria-label="Abrir prototipo de ChacoAgro IA">
+          <img class="project-image" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85" alt="Cultivos extensivos en un campo de la región" loading="lazy" decoding="async">
+          <div class="project-top"><span>02 / AGRITECH</span><span>DATOS · IA</span></div>
+          <div class="project-monogram">IA</div>
+          <div class="project-content"><h3>ChacoAgro IA</h3><p>Una propuesta digital para acompañar mejores decisiones productivas en el NEA.</p><span class="project-demo-link">Explorar prototipo <span aria-hidden="true">↗</span></span></div>
+        </a>
+        <a class="project-card project-ac" href="academico/" aria-label="Visitar sitio de la E.P.G.S. N.º 12">
+          <img class="project-image" src="academico/frente%20del%20colegio%20n12.jpg" alt="Frente de la Escuela Pública de Gestión Social N.º 12" loading="lazy" decoding="async">
+          <div class="project-top"><span>03 / INSTITUCIÓN</span><span>HTML · CSS · JAVASCRIPT</span></div>
+          <div class="project-monogram">12</div>
+          <div class="project-content"><h3>E.P.G.S. N.º 12</h3><p>Sitio institucional de la Escuela Pública de Gestión Social “Juan Domingo Perón”.</p><span class="project-demo-link">Visitar institución <span aria-hidden="true">↗</span></span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section process-section" aria-labelledby="process-title">
+      <div class="section-intro">
+        <p class="eyebrow eyebrow-dark"><span></span>DE LA IDEA AL LANZAMIENTO</p>
+        <h2 id="process-title">Un proceso simple para avanzar con seguridad.</h2>
+      </div>
+      <ol class="process-list">
+        <li><span>01</span><div><h3>Escuchamos</h3><p>Entendemos tu contexto, objetivos y el problema que querés resolver.</p></div></li>
+        <li><span>02</span><div><h3>Damos forma</h3><p>Definimos una solución, prioridades y una ruta de trabajo clara.</p></div></li>
+        <li><span>03</span><div><h3>Construimos</h3><p>Diseñamos y desarrollamos con avances visibles en cada etapa.</p></div></li>
+        <li><span>04</span><div><h3>Lanzamos</h3><p>Probamos, ajustamos y dejamos todo listo para el siguiente capítulo.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="contact-section" id="contacto" aria-labelledby="contact-title">
+      <div class="contact-copy">
+        <p class="eyebrow"><span></span>HABLEMOS</p>
+        <h2 id="contact-title">Tu próxima historia puede empezar hoy.</h2>
+        <p>Contanos qué tenés en mente. Podemos ordenar la idea y encontrar el mejor camino para llevarla a la web.</p>
+        <a class="contact-email" href="mailto:soriav449veronica@gmail.com">soriav449veronica@gmail.com <span aria-hidden="true">↗</span></a>
+        <div class="social-links" aria-label="Canales de SORIA">
+          <a href="https://www.linkedin.com/in/veronica-marisa-soria/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/veronica-marisa-soria1" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span>Quitilipi, Chaco · Argentina</span>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form" method="post" novalidate>
+        <div class="form-field"><label for="name">¿Cómo te llamás?</label><input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error"><span class="field-error" id="name-error" aria-live="polite"></span></div>
+        <div class="form-field"><label for="email">¿A qué email respondemos?</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error"><span class="field-error" id="email-error" aria-live="polite"></span></div>
+        <div class="form-field"><label for="message">Contanos sobre tu idea</label><textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea><span class="field-error" id="message-error" aria-live="polite"></span></div>
+        <button class="button button-primary" type="submit">Enviar consulta <span aria-hidden="true">↗</span></button>
+        <p class="form-status" id="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="#inicio" aria-label="SORIA, volver al inicio"><img src="../assets/img/soria-logo-claro.svg" alt="SORIA" width="145" height="54"></a>
+    <p>© <span id="current-year"></span> SORIA. Tecnología que impulsa.</p>
+    <a class="back-to-top" href="#inicio">Volver arriba ↑</a>
+  </footer>
+</body>
+</html>

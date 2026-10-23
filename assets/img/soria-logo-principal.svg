@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Logo principal de Soria</title>
+  <desc id="desc">Marca de desarrollo de software SORIA, tecnología que impulsa.</desc>
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16C8E8"/>
+      <stop offset=".54" stop-color="#407BF3"/>
+      <stop offset="1" stop-color="#7257E9"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#66E8FF"/>
+      <stop offset="1" stop-color="#C0B7FF"/>
+    </linearGradient>
+  </defs>
+  <!-- Isotipo: una S fluida que representa evolución, enlazada a un gesto de avance. -->
+  <g transform="translate(94 164)">
+    <rect width="272" height="272" rx="76" fill="url(#brand)"/>
+    <path d="M203 72c-27-24-69-31-102-15-28 14-39 41-27 63 8 15 22 23 46 31l47 16c17 6 24 16 20 29-5 17-27 25-47 22-21-3-37-13-49-27" fill="none" stroke="#FFF" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m194 66 29 6-9 28" fill="none" stroke="url(#accent)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="69" cy="69" r="8" fill="#FFF" opacity=".8"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="432" y="299" fill="#102747" font-size="155" font-weight="800" letter-spacing="15">SORIA</text>
+    <rect x="438" y="337" width="642" height="4" rx="2" fill="url(#brand)"/>
+    <text x="438" y="396" fill="#5D748F" font-size="39" font-weight="600" letter-spacing="1.1">TECNOLOGÍA QUE IMPULSA</text>
+  </g>
+</svg>

@@ -1,6 +1,4 @@
-/* Estilos propios del demo.
-   Los colores, la tipografía y los espaciados salen de los tokens que define
-   ../../css/styles.css, así que el demo cambia de tema junto con el sitio. */
+/* Estilos propios del demo. Los colores y espaciados salen de styles.css. */
 
 .demo-body {
   display: flex;

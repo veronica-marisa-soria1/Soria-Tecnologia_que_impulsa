@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
-  <title id="title">Patron abstracto de Web Morph</title>
+  <title id="title">Patrón abstracto de SORIA</title>
   <desc id="desc">Lineas fluidas y bloques geometricos que sugieren transformacion digital.</desc>
   <rect width="1400" height="900" fill="#146b63"/>
   <path d="M0 660C190 588 320 704 500 618C670 537 687 358 865 309C1048 258 1183 391 1400 312V900H0Z" fill="#0e4c47"/>

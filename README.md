@@ -1,11 +1,11 @@
-# Web Morph — Portafolio personal
+# SORIA — Tecnología que impulsa
 
-Sitio web personal de Verónica, desarrolladora de software junior bajo la marca **Web Morph**.
+Sitio web personal de Verónica, desarrolladora de software junior bajo la marca **SORIA**.
 Construido con HTML5, CSS3 y JavaScript vanilla — sin frameworks, sin dependencias, sin build.
 
 ## Demo
 
-🔗 https://veronica-marisa-soria1.github.io/WebMorph.dev/ — *pendiente de publicar (ver [Deploy](#deploy-en-github-pages))*
+🔗 https://veronica-marisa-soria1.github.io/WebMorph.dev/html/ — *pendiente de publicar (ver [Deploy](#deploy-en-github-pages))*
 
 ## Stack
 
@@ -28,19 +28,28 @@ Construido con HTML5, CSS3 y JavaScript vanilla — sin frameworks, sin dependen
 
 ```
 /
-├── index.html
+├── html/
+│   ├── index.html
+│   └── academico.html
 ├── robots.txt
 ├── sitemap.xml
 ├── .gitignore
 ├── .gitattributes
 ├── css/
-│   └── styles.css
+│   ├── styles.css
+│   └── academico.css
 ├── js/
-│   └── main.js
+│   ├── main.js
+│   ├── academico-app.js
+│   ├── academico-data.js
+│   ├── academico-sql.js
+│   └── academico-tests.js
 └── assets/
     └── img/
-        ├── web-morph-logo.svg      logo y favicon principal
-        ├── og-preview.jpg          1200×630, preview en redes
+        ├── soria-logo-principal.svg logo principal
+        ├── soria-logo-principal.png preview para redes
+        ├── soria-logo-claro.svg     logo para fondos oscuros
+        ├── soria-isotipo.svg        isotipo y favicon principal
         ├── favicon-32.png          32×32
         ├── favicon-16.png          16×16
         ├── apple-touch-icon.png    180×180, ícono en iOS
@@ -58,13 +67,13 @@ No hay build ni dependencias. Para levantarlo alcanza con cualquier servidor est
 python -m http.server 8000
 ```
 
-Abrir http://localhost:8000. Conviene usar un servidor en lugar de abrir el
+Abrir http://localhost:8000/html/. Conviene usar un servidor en lugar de abrir el
 archivo directamente: con `file://` no funcionan correctamente las rutas ni el
 iframe del mapa.
 
 ## Demo del proyecto académico
 
-En `proyectos/academico/` hay un demo interactivo: un motor SQL escrito en
+En `html/academico.html` hay un demo interactivo: un motor SQL escrito en
 JavaScript vanilla que resuelve consultas contra un modelo relacional de
 biblioteca (autores, libros, socios y préstamos), enteramente en el navegador.
 
@@ -73,23 +82,23 @@ Soporta `SELECT`, `JOIN`, `LEFT JOIN`, `WHERE`, `GROUP BY`, `HAVING`,
 `MAX`, con la lógica de tres valores de SQL para los `NULL`.
 
 ```
-proyectos/academico/
-├── index.html   interfaz
-├── demo.css     estilos propios (los colores salen de los tokens del sitio)
-├── data.js      esquema, datos y consultas de ejemplo
-├── sql.js       motor: tokenizador, parser y evaluador
-├── app.js       interfaz: esquema, ejemplos y tabla de resultados
-└── tests.js     40 pruebas del motor
+html/academico.html       interfaz
+css/academico.css         estilos propios del demo
+js/academico-data.js      esquema, datos y consultas de ejemplo
+js/academico-sql.js       motor: tokenizador, parser y evaluador
+js/academico-app.js       interfaz: esquema, ejemplos y tabla de resultados
+js/academico-tests.js     40 pruebas del motor
 ```
 
 Para correr las pruebas hace falta Node:
 
 ```bash
-cd proyectos/academico && node tests.js
+node js/academico-tests.js
 ```
 
-Para adaptar el demo a otro conjunto de datos alcanza con reemplazar `data.js`:
-ni el motor ni la interfaz tienen el esquema escrito, lo leen de ahí.
+Para adaptar el demo a otro conjunto de datos alcanza con reemplazar
+`js/academico-data.js`: ni el motor ni la interfaz tienen el esquema escrito,
+lo leen de ahí.
 
 ## Formulario de contacto
 
@@ -114,7 +123,7 @@ sí solo**: hace falta un servicio externo que guarde el número.
 
 Está preparado para [GoatCounter](https://www.goatcounter.com) (gratuito para
 uso personal), pero **desactivado**: el snippet está comentado al final de
-`index.html`. Para activarlo hay que crear la cuenta, copiar el snippet que
+`html/index.html`. Para activarlo hay que crear la cuenta, copiar el snippet que
 GoatCounter entrega y descomentarlo.
 
 Es analítica privada: los visitantes no ven ningún contador. Los números se
@@ -131,17 +140,17 @@ git push -u origin main
 
 Después: **GitHub → Settings → Pages → Branch: `main` → `/ (root)` → Save**.
 
-La URL queda en `https://veronica-marisa-soria1.github.io/WebMorph.dev/`.
+La URL queda en `https://veronica-marisa-soria1.github.io/WebMorph.dev/html/`.
 
 > Si más adelante se usa un dominio propio, hay que actualizar la URL en cuatro
 > lugares: `<link rel="canonical">` y las etiquetas `og:`/`twitter:` de
-> `index.html`, `robots.txt` y `sitemap.xml`.
+> `html/index.html` y `html/academico.html`, `robots.txt` y `sitemap.xml`.
 
 ## Pendientes
 
 - [ ] Publicar en GitHub Pages
 - [ ] Conectar el formulario a un endpoint real (`CONTACT_ENDPOINT`)
-- [ ] Activar la analítica de GoatCounter (snippet comentado en `index.html`)
+- [ ] Activar la analítica de GoatCounter (snippet comentado en `html/index.html`)
 - [ ] Reemplazar los "Demo pendiente" / "Código pendiente" de MH Gestión y ChacoAgro IA por links reales
 - [ ] Adaptar el esquema y los datos del demo académico a los del trabajo real de la Tecnicatura
 - [ ] Decidir qué datos personales del CV se publican: `assets/cv.pdf` incluye teléfono, fecha de nacimiento y estado civil
@@ -151,4 +160,4 @@ La URL queda en `https://veronica-marisa-soria1.github.io/WebMorph.dev/`.
 
 ## Desarrollado por
 
-Verónica · Web Morph · Quitilipi, Chaco, Argentina
+Verónica · SORIA · Tecnología que impulsa · Quitilipi, Chaco, Argentina
