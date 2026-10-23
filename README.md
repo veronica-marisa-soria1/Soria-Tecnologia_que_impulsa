@@ -5,7 +5,7 @@ Construido con HTML5, CSS3 y JavaScript vanilla — sin frameworks, sin dependen
 
 ## Demo
 
-🔗 https://veronica-marisa-soria1.github.io/WebMorph.dev/html/ — *pendiente de publicar (ver [Deploy](#deploy-en-github-pages))*
+🔗 https://veronica-marisa-soria1.github.io/Soria-Tecnologia_que_impulsa/ — *GitHub Pages*
 
 ## Stack
 
@@ -138,9 +138,9 @@ consultan desde el panel de GoatCounter.
 git push -u origin main
 ```
 
-Después: **GitHub → Settings → Pages → Branch: `main` → `/ (root)` → Save**.
+El workflow `.github/workflows/deploy-pages.yml` publica el contenido de la raíz en cada push a `main`. En GitHub, seleccionar **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
-La URL queda en `https://veronica-marisa-soria1.github.io/WebMorph.dev/html/`.
+La raíz `https://veronica-marisa-soria1.github.io/Soria-Tecnologia_que_impulsa/` redirige a `html/`; el sitio principal queda en `https://veronica-marisa-soria1.github.io/Soria-Tecnologia_que_impulsa/html/`.
 
 > Si más adelante se usa un dominio propio, hay que actualizar la URL en cuatro
 > lugares: `<link rel="canonical">` y las etiquetas `og:`/`twitter:` de
@@ -148,7 +148,7 @@ La URL queda en `https://veronica-marisa-soria1.github.io/WebMorph.dev/html/`.
 
 ## Pendientes
 
-- [ ] Publicar en GitHub Pages
+- [ ] Seleccionar GitHub Actions como source en Settings → Pages
 - [ ] Conectar el formulario a un endpoint real (`CONTACT_ENDPOINT`)
 - [ ] Activar la analítica de GoatCounter (snippet comentado en `html/index.html`)
 - [ ] Reemplazar los "Demo pendiente" / "Código pendiente" de MH Gestión y ChacoAgro IA por links reales

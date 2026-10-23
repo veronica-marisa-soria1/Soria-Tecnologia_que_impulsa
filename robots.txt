@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://veronica-marisa-soria1.github.io/WebMorph.dev/sitemap.xml
+Sitemap: https://veronica-marisa-soria1.github.io/Soria-Tecnologia_que_impulsa/sitemap.xml
