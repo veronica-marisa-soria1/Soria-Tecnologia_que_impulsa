@@ -70,7 +70,10 @@
     });
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeMenu();
+      if (event.key === "Escape" && navMenu.classList.contains("is-open")) {
+        closeMenu();
+        navToggle.focus();
+      }
     });
   }
 
