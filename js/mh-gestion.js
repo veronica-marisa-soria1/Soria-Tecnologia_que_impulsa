@@ -64,7 +64,24 @@
     const formattedAmount = new Intl.NumberFormat("es-AR", { maximumFractionDigits: 0 }).format(amount);
     const row = document.createElement("tr");
     row.dataset.searchable = "";
-    row.innerHTML = `<td><strong>V-${saleNumber}</strong><small>${detail.replace(/[<>]/g, "")}</small></td><td>${client.replace(/[<>]/g, "")}</td><td>Hoy, recién</td><td><span class="status status-pending">Pendiente</span></td><td class="amount-col">$ ${formattedAmount}</td>`;
+    const saleCell = row.insertCell();
+    const saleId = document.createElement("strong");
+    saleId.textContent = "V-" + saleNumber;
+    const saleDetail = document.createElement("small");
+    saleDetail.textContent = detail;
+    saleCell.append(saleId, saleDetail);
+
+    row.insertCell().textContent = client;
+    row.insertCell().textContent = "Hoy, recién";
+
+    const status = document.createElement("span");
+    status.className = "status status-pending";
+    status.textContent = "Pendiente";
+    row.insertCell().append(status);
+
+    const amountCell = row.insertCell();
+    amountCell.className = "amount-col";
+    amountCell.textContent = "$ " + formattedAmount;
     document.querySelector('[data-table="ventas"]').prepend(row);
     document.querySelector("#recent-sales").prepend(row.cloneNode(true));
     document.querySelector("#today-total").textContent = "$ " + formattedAmount;
