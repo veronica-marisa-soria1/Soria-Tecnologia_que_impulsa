@@ -43,6 +43,9 @@ html[data-theme="dark"] .project-ac .project-content a{color:#9bc6ff}
 html[data-theme="dark"] .theme-toggle{color:#e6edf5;border-color:#41536a;background:#152337}
 .theme-toggle{display:grid;place-items:center;width:40px;height:40px;padding:9px;color:var(--ink);border:1px solid var(--line);border-radius:7px;background:transparent;transition:background-color .2s,border-color .2s,color .2s}
 .theme-toggle:hover{background:rgba(64,123,243,.1)}
+.brand-logo-dark,.brand-isotipo{display:none}
+html[data-theme="dark"] .brand-logo-light{display:none}
+html[data-theme="dark"] .brand-logo-dark{display:block}
 .project-card:before{position:absolute;z-index:-1;inset:0;content:"";background:linear-gradient(180deg,rgba(5,18,32,.24),rgba(5,18,32,.2) 35%,rgba(5,18,32,.88))}
 .project-card>.project-image{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .project-card:hover>.project-image{transform:scale(1.05)}
@@ -56,4 +59,5 @@ html[data-theme="dark"] .theme-toggle{color:#e6edf5;border-color:#41536a;backgro
 html[data-theme="dark"] .theme-icon-moon{display:none}
 html[data-theme="dark"] .theme-icon-sun{display:block}
 @media(max-width:700px){.theme-menu-item{padding:4px}.theme-toggle{width:100%;height:44px}}
+@media(max-width:640px){.brand-logo-light,.brand-logo-dark{display:none!important}.brand .brand-isotipo{display:block;width:auto;height:48px}}
 @media(prefers-reduced-motion:reduce){html[data-theme] body{transition:none}}

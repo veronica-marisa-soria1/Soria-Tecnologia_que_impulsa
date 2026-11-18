@@ -1,12 +1,3 @@
-.contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.tarjeta {
-    flex: 2 2 500px;
-}
 :root {
     --azul-institucional: #0A3D74;
     --azul-titulos: #072A52;
@@ -117,126 +108,10 @@ body {
 }
 .menu-hamburguesa:hover { color: var(--naranja-acento); }
 
-.menu-movil {
-    display: none;
-    position: absolute;
-    top: auto;
-    left: 0;
-    width: 100%;
-    background: var(--fondo-blanco);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    flex-direction: column;
-    padding: 1.2rem 5%;
-    gap: 1rem;
-    z-index: 999;
-}
-.menu-movil.activo { display: flex; }
-.menu-movil a {
-    color: var(--azul-institucional);
-    font-weight: 600;
-    text-decoration: none;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--borde-suave);
-    transition: var(--transicion);
-}
-.menu-movil a:hover { color: var(--naranja-acento); padding-left: 0.5rem; }
-
-.contenedor-principal {
-    padding: 1.2rem 5%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.bloque-datos-contacto {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    border: 1px solid var(--borde-suave);
-    margin-bottom: 1.8rem;
-    background: var(--fondo-blanco);
-}
-.col-datos {
-    padding: 1.2rem;
-}
-.col-datos.izq {
-    border-right: 1px solid var(--borde-suave);
-}
-.col-datos h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--texto-oscuro);
-    margin-bottom: 0.6rem;
-}
-.col-datos p {
-    font-size: 0.92rem;
-    color: var(--texto-claro);
-    margin-bottom: 0.4rem;
-}
-
-.caja-mapa {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.5rem;
-    padding: 0.7rem;
-    background: var(--fondo-tarjeta);
-    border: 1px solid var(--borde-suave);
-    margin: 0.8rem 0;
-    font-weight: 500;
-    color: var(--texto-claro);
-    cursor: pointer;
-    transition: var(--transicion);
-}
-.caja-mapa:hover {
-    background: #eef4f8;
-    color: var(--azul-acento);
-}
-.caja-mapa.boton {
-    background: var(--azul-acento);
-    color: white;
-    justify-content: center;
-    font-weight: 600;
-    border: none;
-    margin-top: 0.2rem;
-}
-.caja-mapa.boton:hover {
-    background: var(--azul-institucional);
-    color: white;
-}
-
 .check {
     color: #16A34A;
     font-weight: bold;
     margin-right: 0.3rem;
-}
-
-.titulo-seccion {
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--azul-titulos);
-    margin-bottom: 1.2rem;
-}
-
-.grid-navegacion {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-}
-.boton-seccion {
-    padding: 1.2rem 0.8rem;
-    text-align: center;
-    border: 1px solid var(--borde-suave);
-    background: var(--fondo-blanco);
-    cursor: pointer;
-    font-weight: 600;
-    color: var(--texto-oscuro);
-    transition: var(--transicion);
-}
-.boton-seccion:hover {
-    border-color: var(--azul-acento);
-    background: linear-gradient(to bottom, var(--fondo-blanco), #f0f4f8);
-    color: var(--azul-acento);
 }
 
 .contenido-interno {
@@ -308,19 +183,6 @@ body {
 }
 .pie-pagina .redes a:hover { color: var(--naranja-acento); }
 
-@media (max-width: 600px) {
-    .bloque-datos-contacto {
-        grid-template-columns: 1fr;
-    }
-    .col-datos.izq {
-        border-right: none;
-        border-bottom: 1px solid var(--borde-suave);
-    }
-    .grid-navegacion {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 /* Portada de inicio */
 .inicio-cabecera {
     min-height: 94px;
@@ -335,11 +197,6 @@ body {
 }
 .marca-institucional { display: flex; align-items: center; flex: 0 0 auto; }
 .marca-institucional img { width: min(500px, 54vw); height: 100px; object-fit: contain; }
-.navegacion-escritorio { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 0.35rem 1.2rem; }
-.navegacion-escritorio button { border: 0; background: none; color: #38434a; font: inherit; font-weight: 600; cursor: pointer; padding: 0.4rem 0; transition: color .2s ease; }
-.navegacion-escritorio button:hover { color: #087887; }
-.nav-grupo { color: #8b969a; text-transform: uppercase; letter-spacing: .08em; font-size: .76rem; font-weight: 800; }
-.nav-separador { height: 25px; width: 1px; background: #d9dfdf; margin: 0 .25rem; }
 .inicio-cabecera .menu-hamburguesa { display: none; border: 0; background: none; }
 .franja-institucional { height: 6px; background: linear-gradient(90deg, #168da2 0 33.33%, #f4ce24 33.33% 66.66%, #ef6c24 66.66%); }
 .portada-colegio {
@@ -360,8 +217,6 @@ body {
 .portada-colegio h1 { max-width: 850px; font-size: clamp(2.6rem, 5.4vw, 4.9rem); line-height: 1.04; letter-spacing: -.045em; font-weight: 760; }
 .portada-colegio h1 span { font-weight: 680; }
 .portada-bajada { margin-top: 1.35rem; color: rgba(255,255,255,.9); font-size: clamp(1.1rem, 2vw, 1.4rem); line-height: 1.55; }
-.portada-boton { display: inline-flex; align-items: center; gap: .9rem; margin-top: 1.7rem; padding: .8rem 1.1rem; border: 1px solid rgba(255,255,255,.7); color: #fff; text-decoration: none; font-weight: 700; transition: background .2s, color .2s; }
-.portada-boton:hover { background: #fff; color: #123b4c; }
 .portada-pie { position: absolute; right: 6%; bottom: 1.25rem; color: rgba(255,255,255,.88); font-size: .85rem; letter-spacing: .04em; }
 .propuestas-inicio { width: min(1180px, 88%); margin: -1px auto 4rem; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.25rem; position: relative; z-index: 1; padding-top: 2.7rem; }
 .propuesta-card { min-height: 220px; display: flex; align-items: flex-start; gap: 1.2rem; padding: 1.8rem; border: 1px solid #e1e6e8; background: #fff; box-shadow: 0 12px 34px rgba(20, 47, 59, .07); }
@@ -378,15 +233,11 @@ body {
 @media (max-width: 1050px) {
     .inicio-cabecera { gap: 1rem; }
     .marca-institucional img { width: 190px; }
-    .navegacion-escritorio { gap: .25rem .8rem; }
-    .navegacion-escritorio button { font-size: .9rem; }
 }
 @media (max-width: 760px) {
     .inicio-cabecera { min-height: 76px; padding: .4rem 1.1rem; }
     .marca-institucional img { width: 180px; height: 60px; }
-    .navegacion-escritorio { display: none; }
     .inicio-cabecera .menu-hamburguesa { display: block; font-size: 1.9rem; padding: .15rem .35rem; }
-    .inicio-cabecera .menu-movil { top: 100%; left: 0; }
     .portada-colegio { min-height: 530px; min-height: min(660px, 70svh); background-position: 58% center; }
     .portada-colegio::before { background: linear-gradient(90deg, rgba(9, 31, 45, .78), rgba(9, 31, 45, .37)), linear-gradient(0deg, rgba(7, 26, 39, .36), transparent 55%); }
     .portada-contenido { width: calc(100% - 2.5rem); padding: 3rem 0 5rem; }
@@ -396,7 +247,7 @@ body {
     .propuesta-card { min-height: auto; padding: 1.3rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-    .portada-boton, .propuesta-card button, .propuesta-card .propuesta-accion, .navegacion-escritorio button { transition: none; }
+    .propuesta-card button, .propuesta-card .propuesta-accion { transition: none; }
 }
 /* Menú lateral, carrusel y botones de la portada */
 .boton-institucion { display: inline-flex; align-items: center; gap: .75rem; padding: .75rem 0 .75rem 1rem; border: 0; background: transparent; color: #26383e; font: inherit; font-weight: 700; cursor: pointer; }
@@ -423,9 +274,6 @@ body {
 .propuesta-texto { display: flex; flex-direction: column; align-items: flex-start; }
 .propuesta-card button, .propuesta-card .propuesta-accion { margin-top: auto; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: .7rem 1rem; background: #087887; color: #fff; border-radius: 3px; }
 .propuesta-card button:hover, .propuesta-card .propuesta-accion:hover { background: #075c69; color: #fff; }
-.contacto-tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: .9rem; margin-top: 1.5rem; }
-.contacto-tarjetas .recuadro { margin: 0; }
-.contacto-tarjetas h3 { margin-top: 0; }
 @media (prefers-reduced-motion: reduce) {
     .portada-carrusel { animation: none; }
     .menu-institucion { transition: none; }
@@ -436,8 +284,8 @@ body {
 
 /* Página de noticias */
 .pagina-noticias { background: #f5f7f8; }
-.pagina-noticias .noticias-volver { color: #087887; font-weight: 750; text-decoration: none; }
-.pagina-noticias .noticias-volver:hover { color: #e97426; }
+.page-back { color: #087887; font-weight: 750; text-decoration: none; }
+.page-back:hover { color: #e97426; }
 .noticias-portada { position: relative; isolation: isolate; overflow: hidden; background: #123b4c url("frente%20del%20colegio%20n12.jpg") center 48% / cover no-repeat; color: #fff; }
 .noticias-portada::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(9, 31, 45, .88), rgba(9, 31, 45, .55) 65%, rgba(9, 31, 45, .2)); }
 .noticias-portada-contenido { width: min(1180px, 88%); margin: 0 auto; padding: clamp(3.5rem, 9vw, 7rem) 0; }
@@ -487,7 +335,7 @@ body {
 @media (max-width: 600px) {
     .pagina-noticias .inicio-cabecera { min-height: 76px; padding: .4rem 1.1rem; }
     .pagina-noticias .marca-institucional img { width: 180px; height: 60px; }
-    .pagina-noticias .noticias-volver { font-size: .88rem; }
+    .page-back { font-size: .88rem; }
     .noticias-portada-contenido { width: calc(100% - 2.5rem); }
     .noticias-contenido { width: calc(100% - 2rem); padding: 2rem 0 3rem; }
     .noticias-editor { padding: 1.2rem; }
@@ -499,8 +347,6 @@ body {
 
 /* Página de preinscripciones */
 .pagina-inscripciones { background: #f5f7f8; }
-.pagina-inscripciones .inscripciones-volver { color: #087887; font-weight: 750; text-decoration: none; }
-.pagina-inscripciones .inscripciones-volver:hover { color: #e97426; }
 .inscripciones-portada { position: relative; isolation: isolate; overflow: hidden; background: #123b4c url("frente%20del%20colegio%20n12.jpg") center 48% / cover no-repeat; color: #fff; }
 .inscripciones-portada::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(9, 31, 45, .88), rgba(9, 31, 45, .55) 65%, rgba(9, 31, 45, .2)); }
 .inscripciones-portada-contenido { width: min(1180px, 88%); margin: 0 auto; padding: clamp(3.5rem, 9vw, 7rem) 0; }
@@ -541,7 +387,6 @@ body {
 @media (max-width: 600px) {
     .pagina-inscripciones .inicio-cabecera { min-height: 76px; padding: .4rem 1.1rem; }
     .pagina-inscripciones .marca-institucional img { width: 180px; height: 60px; }
-    .pagina-inscripciones .inscripciones-volver { font-size: .88rem; }
     .inscripciones-portada-contenido { width: calc(100% - 2.5rem); }
     .inscripciones-contenido { width: calc(100% - 2rem); padding: 2rem 0 3rem; }
     .inscripciones-informacion, .inscripciones-formulario-seccion { padding: 1.2rem; }

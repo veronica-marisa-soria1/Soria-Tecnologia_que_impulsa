@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Generate shared institutional pages
+        run: node scripts/build-academico.mjs
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:

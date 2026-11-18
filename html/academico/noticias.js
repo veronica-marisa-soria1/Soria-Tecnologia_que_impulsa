@@ -128,6 +128,15 @@ function leerImagen(archivo) {
     });
 }
 
+function validarImagen(archivo) {
+    if (!TIPOS_IMAGEN_PERMITIDOS.includes(archivo.type)) {
+        throw new Error('El formato de imagen no es válido. Elegí un archivo JPG, PNG o WebP.');
+    }
+    if (archivo.size > TAMANO_MAXIMO_IMAGEN) {
+        throw new Error('La imagen supera el máximo permitido de 1,5 MB.');
+    }
+}
+
 function fechaActual() {
     const ahora = new Date();
     const desplazamiento = ahora.getTimezoneOffset() * 60000;
@@ -141,14 +150,11 @@ entradaImagen.addEventListener('change', async () => {
     const archivo = entradaImagen.files[0];
     if (!archivo) return;
 
-    if (!TIPOS_IMAGEN_PERMITIDOS.includes(archivo.type)) {
+    try {
+        validarImagen(archivo);
+    } catch (error) {
         entradaImagen.value = '';
-        mostrarError('El formato de imagen no es válido. Elegí un archivo JPG, PNG o WebP.');
-        return;
-    }
-    if (archivo.size > TAMANO_MAXIMO_IMAGEN) {
-        entradaImagen.value = '';
-        mostrarError('La imagen supera el máximo permitido de 1,5 MB.');
+        mostrarError(error.message);
         return;
     }
 
@@ -178,12 +184,7 @@ formulario.addEventListener('submit', async event => {
         let imagen = null;
 
         if (archivo) {
-            if (!TIPOS_IMAGEN_PERMITIDOS.includes(archivo.type)) {
-                throw new Error('El formato de imagen no es válido. Elegí un archivo JPG, PNG o WebP.');
-            }
-            if (archivo.size > TAMANO_MAXIMO_IMAGEN) {
-                throw new Error('La imagen supera el máximo permitido de 1,5 MB.');
-            }
+            validarImagen(archivo);
             imagen = await leerImagen(archivo);
         }
 
