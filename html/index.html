@@ -41,6 +41,8 @@
   <link rel="stylesheet" href="../css/styles.css?v=20261118-2">
   <link rel="stylesheet" href="../css/neon-theme.css?v=20261118-2">
   <script src="../js/main.js?v=20261118-2" defer></script>
+  <link rel="stylesheet" href="../css/politicas.css">
+  <script src="../js/aviso-privacidad.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -197,6 +199,7 @@
         <div class="form-field"><label for="name">¿Cómo te llamás?</label><input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error"><span class="field-error" id="name-error" aria-live="polite"></span></div>
         <div class="form-field"><label for="email">¿A qué email respondemos?</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error"><span class="field-error" id="email-error" aria-live="polite"></span></div>
         <div class="form-field"><label for="message">Contanos sobre tu idea</label><textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea><span class="field-error" id="message-error" aria-live="polite"></span></div>
+        <p class="privacy-form-note">Usamos tu nombre, correo y mensaje para responderte. El formulario prepara un borrador en tu aplicación de correo. <a href="politicas.html#privacidad">Cómo tratamos tus datos</a>.</p>
         <button class="button button-primary" type="submit">Enviar consulta <span aria-hidden="true">↗</span></button>
         <p class="form-status" id="form-status" aria-live="polite"></p>
       </form>
@@ -207,6 +210,20 @@
     <a href="#inicio" aria-label="SORIA, volver al inicio"><img src="../assets/img/soria-logo-neon.png" alt="SORIA" width="2048" height="768"></a>
     <p>© <span id="current-year"></span> SORIA. Tecnología que impulsa.</p>
     <a class="back-to-top" href="#inicio">Volver arriba ↑</a>
+    <nav class="policy-links" aria-label="Seguridad y privacidad">
+      <a href="politicas.html#privacidad">Política de privacidad</a>
+      <a href="politicas.html#cookies">Política de cookies</a>
+      <a href="politicas.html#terminos">Términos y condiciones</a>
+      <a href="politicas.html#seguridad">Política de seguridad</a>
+    </nav>
   </footer>
+  <aside class="privacy-notice" aria-labelledby="privacy-notice-title" hidden>
+    <h2 id="privacy-notice-title">Tu privacidad en SORIA</h2>
+    <p>Tu navegador recuerda si cerraste este aviso.</p>
+    <div class="privacy-actions">
+      <a href="politicas.html">Consultar las políticas</a>
+      <button type="button" id="dismiss-privacy-notice">Cerrar aviso</button>
+    </div>
+  </aside>
 </body>
 </html>
