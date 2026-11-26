@@ -1,0 +1,59 @@
+.policy-links {
+  display: flex;
+  flex: 1 0 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem 1.25rem;
+}
+
+.site-footer:has(.policy-links) { flex-wrap: wrap; }
+
+.policy-links a,
+.privacy-form-note a,
+.privacy-notice a { text-decoration: underline; text-underline-offset: .2em; }
+
+.privacy-notice {
+  position: fixed;
+  z-index: 100;
+  inset-inline-end: 1rem;
+  inset-block-end: 1rem;
+  width: min(20rem, calc(100% - 2rem));
+  box-sizing: border-box;
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  padding: .65rem .8rem;
+  background: #141928;
+  color: #f7faff;
+  border: 1px solid #8997ac;
+  border-radius: 1rem;
+  box-shadow: 0 12px 34px #0007;
+}
+
+.privacy-notice h2 { margin: 0; font-size: 1rem; line-height: 1.3; }
+.privacy-notice p { margin: .25rem 0 .4rem; font-size: .875rem; line-height: 1.4; }
+.privacy-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .75rem; font-size: .875rem; }
+.privacy-notice a { color: #dce9ff; }
+.privacy-notice button {
+  min-height: 2rem;
+  padding: .2rem .6rem;
+  color: #141928;
+  background: #f7faff;
+  border: 0;
+  border-radius: .5rem;
+  font: inherit;
+  cursor: pointer;
+}
+.privacy-notice :focus-visible { outline: 2px solid #a9cdff; outline-offset: 3px; }
+
+.policy-page {
+  margin: 0;
+  color: #182237;
+  background: #f7faff;
+  font: 1rem/1.65 system-ui, sans-serif;
+}
+.policy-content { width: min(46rem, calc(100% - 2rem)); margin: 2rem auto 3rem; }
+.policy-content a { color: #243e82; overflow-wrap: anywhere; }
+.policy-content h1, .policy-content h2 { line-height: 1.2; }
+.policy-content section { margin-top: 2.5rem; scroll-margin-top: 1rem; }
+.policy-content section + section { border-top: 1px solid #ccd5e5; padding-top: 1.5rem; }
+.policy-content .policy-links { justify-content: flex-start; }
