@@ -30,17 +30,22 @@ body {
 
 .brand {
   height: auto;
-  padding: 4px 8px;
-  border: 1px solid #ff1597;
-  border-radius: 9px;
-  background: #000;
-  box-shadow: 0 0 0 1px rgba(255, 99, 185, 0.18), 0 0 18px rgba(255, 20, 150, 0.2);
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-.brand:hover,
-.brand:focus-visible {
-  border-color: #ff89cb;
-  box-shadow: 0 0 0 2px rgba(255, 107, 191, 0.18), 0 0 25px rgba(255, 20, 150, 0.35);
+.brand img,
+.site-footer > a:first-child img {
+  mix-blend-mode: screen;
+  filter: brightness(1.1);
+}
+
+.brand:focus-visible,
+.site-footer > a:first-child:focus-visible {
+  outline: 2px solid #ff89cb;
+  outline-offset: 4px;
 }
 
 .brand .brand-isotipo {
@@ -264,13 +269,6 @@ body {
   background: #000;
 }
 
-.site-footer > a:first-child {
-  padding: 5px 8px;
-  border: 1px solid #ff1597;
-  border-radius: 8px;
-  background: #000;
-}
-
 html[data-theme="dark"] {
   --ink: #fff2fa;
   --muted: #d6afc5;
@@ -332,8 +330,7 @@ html[data-theme="dark"] .project-ac:before {
 
 @media (max-width: 700px) {
   .brand {
-    padding: 2px 5px;
-    border-radius: 8px;
+    padding: 2px 0;
   }
 
   .brand-logo-light,

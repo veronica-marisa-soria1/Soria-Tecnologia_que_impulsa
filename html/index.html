@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,20 +26,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap">
-  <script>
-    (() => {
-      const root = document.documentElement;
-      try {
-        const savedTheme = localStorage.getItem("wm-theme");
-        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        root.dataset.theme = savedTheme || systemTheme;
-      } catch {
-        root.dataset.theme = "light";
-      }
-    })();
-  </script>
   <link rel="stylesheet" href="../css/styles.css?v=20261118-2">
-  <link rel="stylesheet" href="../css/neon-theme.css?v=20261118-2">
+  <link rel="stylesheet" href="../css/neon-theme.css?v=20261126">
   <script src="../js/main.js?v=20261118-2" defer></script>
   <link rel="stylesheet" href="../css/politicas.css">
   <script src="../js/aviso-privacidad.js" defer></script>
@@ -66,13 +54,6 @@
         <li><a href="#enfoque">Enfoque</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a class="nav-cta" href="#contacto">Hablemos</a></li>
-        <li class="theme-menu-item">
-          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro">
-            <svg class="theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-            <span class="sr-only" id="theme-toggle-label">Cambiar a modo oscuro</span>
-          </button>
-        </li>
       </ul>
     </nav>
   </header>
